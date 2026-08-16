@@ -38,7 +38,7 @@
       font-family: 'Tajawal', sans-serif;
       line-height: 1.7;
       overflow-x: hidden;
-      padding-bottom: 120px;
+      padding-bottom: 130px;
     }
 
     .quran-font {
@@ -76,6 +76,7 @@
       align-items: center;
       justify-content: space-between;
       height: 75px;
+      gap: 10px;
     }
 
     .logo-box {
@@ -105,31 +106,59 @@
       line-height: 1.2;
     }
 
-    .channel-tag {
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(223, 177, 91, 0.12);
-      border: 1px solid var(--border-color);
-      color: var(--gold-light);
-      padding: 5px 14px;
+      padding: 6px 12px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .youtube-btn {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #ff6b6b;
+    }
+
+    .youtube-btn:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+
+    .tiktok-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .tiktok-btn:hover {
+      background: #000;
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
     }
 
     .btn-counter {
       background: rgba(223, 177, 91, 0.1);
       border: 1px solid var(--border-color);
       color: var(--gold-light);
-      padding: 7px 16px;
+      padding: 7px 14px;
       border-radius: 30px;
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       transition: all 0.2s;
     }
 
@@ -403,7 +432,6 @@
       justify-content: center;
     }
 
-    /* Fixed Sticky Audio Bar */
     .sticky-player {
       position: fixed;
       bottom: 20px;
@@ -493,7 +521,31 @@
       justify-content: center;
     }
 
-    /* Modal */
+    .progress-bar-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gold-primary);
+      border-radius: 2px;
+      width: 0%;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -537,10 +589,17 @@
 
     footer {
       text-align: center;
-      padding: 25px 0;
+      padding: 30px 0;
       color: var(--text-muted);
       font-size: 13px;
       border-top: 1px solid var(--border-light);
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -557,8 +616,15 @@
         </div>
       </a>
 
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <span class="channel-tag"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> قناة مِنْهَاجُ الْهُدَى</span>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="social-links">
+          <a href="https://youtube.com/@minhaj-alhuda?si=-eAr6LWNNVvDhVM4" target="_blank" rel="noopener noreferrer" class="social-btn youtube-btn">
+            <i class="fa-brands fa-youtube"></i> يوتيوب
+          </a>
+          <a href="https://www.tiktok.com/@minhaj.alhuda?_r=1&_t=ZS-98wTa3Of3FF" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-btn">
+            <i class="fa-brands fa-tiktok"></i> تيك توك
+          </a>
+        </div>
         <button class="btn-counter" onclick="incrementSalawat()">
           <i class="fa-solid fa-heart"></i>
           <strong id="salawat-count">0</strong>
@@ -581,24 +647,22 @@
       </div>
     </section>
 
-    <!-- Definition & Mission Section -->
     <section class="about-platform">
       <div class="about-header">
         <i class="fa-solid fa-feather-pointed" style="font-size: 22px; color: var(--gold-primary);"></i>
         <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
       </div>
       <p class="about-desc">
-        <strong>منصة وقناة «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية محققة وموثقة</strong> من كتب السنة، مع إبراز أثر الملازمة في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
+        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء الواقعيين</strong>، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
       </p>
       <div class="about-features">
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> نصوص محققة وموثقة من كتب الحديث</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> صوت عربي واضح ومسموع للمتون</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل مباشر وفوري لكافة الأجهزة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تابعة لقناة مِنْهَاجُ الْهُدَى الدعوية</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية لكبار علماء الأمة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> شروح حديثية وفقهية رصينة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل صوتي مباشر وفوري</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
       </div>
     </section>
 
-    <!-- Controls -->
     <div class="controls-bar">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -615,11 +679,9 @@
       </div>
     </div>
 
-    <!-- Audio Cards Grid -->
     <div class="audio-grid" id="audioContainer"></div>
   </main>
 
-  <!-- Sticky Player Bar -->
   <div class="sticky-player" id="stickyPlayer">
     <div class="player-track-info">
       <div class="player-thumb" id="playerThumb"><i class="fa-solid fa-volume-high"></i></div>
@@ -635,10 +697,18 @@
         <button class="ctrl-play-btn" id="masterPlayBtn" onclick="togglePlay()"><i class="fa-solid fa-play"></i></button>
         <button class="ctrl-btn" onclick="nextTrack()"><i class="fa-solid fa-forward-step"></i></button>
       </div>
+      <div class="progress-bar-wrap">
+        <span id="currentTime">00:00</span>
+        <div class="progress-track" onclick="seekAudio(event)">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span id="totalDuration">00:00</span>
+      </div>
     </div>
+
+    <audio id="mainAudioElement" preload="metadata"></audio>
   </div>
 
-  <!-- Details Modal -->
   <div class="modal" id="hadithModal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -647,64 +717,79 @@
   </div>
 
   <footer>
-    <p>منصة وقناة «مِنْهَاجُ الْهُدَى» — وقف رقمي خادم لجناب المصطفى ﷺ</p>
+    <div class="footer-socials">
+      <a href="https://youtube.com/@minhaj-alhuda?si=-eAr6LWNNVvDhVM4" target="_blank" rel="noopener noreferrer" class="social-btn youtube-btn">
+        <i class="fa-brands fa-youtube"></i> قناة اليوتيوب الرسمية
+      </a>
+      <a href="https://www.tiktok.com/@minhaj.alhuda?_r=1&_t=ZS-98wTa3Of3FF" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-btn">
+        <i class="fa-brands fa-tiktok"></i> حساب التيك توك
+      </a>
+    </div>
+    <p>منصة وقنوات «مِنْهَاجُ الْهُدَى» — وقف رقمي خادم لجناب المصطفى ﷺ</p>
   </footer>
 
   <script>
-    const lectureList = [
+    const realAudios = [
       {
-        title: "فضل الصلاة على النبي ﷺ وثواب صلاة الله عليك عشراً",
+        title: "فضل وثواب الصلاة على النبي ﷺ ومعنى صلاة الله عليك عشراً",
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
-        desc: "بيان عظيم الأجر في صلاة الله على العبد عشراً ورفع الدرجات في الملأ الأعلى.",
-        text: "قال رسول الله صلى الله عليه وسلم: من صلى علي صلاة صلى الله عليه بها عشرا. ومعنى صلاة الله على العبد: ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين ومغفرة ذنوبه ورفع درجاته."
+        desc: "شرح حديث: «من صلى علي واحدة صلى الله عليه بها عشرا» وبيان ثناء الله على العبد في الملأ الأعلى.",
+        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/01.mp3",
+        text: "ثبت في صحيح مسلم أن النبي ﷺ قال: «مَنْ صَلَّى عَلَيَّ صَلَاةً صَلَّى اللَّهُ عَلَيْهِ بِهَا عَشْرًا». ومعنى صلاة الله على عبده ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين ومغفرة ذنوبه."
       },
       {
         title: "فقه حديث أُبي بن كعب: إذن تُكفى همك ويُغفر لك ذنبك",
-        sheikh: "الشيخ ابن عثيمين رحمه الله",
+        sheikh: "الشيخ محمد بن صالح العثيمين رحمه الله",
         cat: "ibrahim",
-        desc: "تحقيق فقهي نفيس في معنى جعل الدعاء كله صلاة وسلاماً على رسول الله ﷺ.",
-        text: "قال النبي صلى الله عليه وسلم لأبي بن كعب لما قال: أجعل لك صلاتي كلها؟ قال: إذن تكفى همك ويغفر لك ذنبك. فمن شغل وقته بالصلاة على رسول الله كفاه الله أمر دنياه وآخرته."
+        desc: "شرح نفيس ومفصل لحديث أُبي في جعل الدعاء كله صلاة وسلاماً على النبي ﷺ وما يترتب عليه من تفريج الكرب.",
+        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/02.mp3",
+        text: "قال الإمام ابن القيم: سُئل شيخ الإسلام عن تفسير حديث أُبي، فقال: كان لأُبي دعاء يدعو به لنفسه، فسأل النبي ﷺ: هل يجعل له منه ربعه أو نصفه؟ حتى قال: أجعل لك صلاتي كلها، أي أجعل دعائي كله صلاة عليك، فقال: إذن تكفى همك ويغفر لك ذنبك."
       },
       {
         title: "خصوصية يوم وليلة الجمعة في الصلاة على النبي ﷺ",
         sheikh: "الشيخ عثمان الخميس",
         cat: "friday",
-        desc: "بيان فضل الإكثار من الصلاة عليه يوم الجمعة وعرض أسماء المصلين عليه ﷺ.",
-        text: "قال صلى الله عليه وسلم: أكثروا علي من الصلاة يوم الجمعة وليلة الجمعة فإن صلاتكم معروضة علي. فيوم الجمعة سيد الأيام والرسول سيد الخلق وللصلاة فيه مزية وأجر مضاعف."
+        desc: "بيان السنن المهجورة في يوم الجمعة وعرض أسماء المصلين على النبي ﷺ بأسمائهم وأسماء آبائهم.",
+        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/03.mp3",
+        text: "قال ﷺ: «أَكْثِرُوا عَلَيَّ مِنَ الصَّلَاةِ يَوْمَ الْجُمُعَةِ وَلَيْلَةَ الْجُمُعَةِ، فَإِنَّ صَلَاتَكُمْ مَعْرُوضَةٌ عَلَيَّ». وهو يوم شريف خص الله به خير الرسل وخير الأمم."
       },
       {
-        title: "قصص وعجائب تفريج الكروب بملازمة الصلاة الإبراهيمية",
-        sheikh: "الشيخ بدر المشاري",
+        title: "قصص وعجائب تفريج الهموم بملازمة الصلاة الإبراهيمية",
+        sheikh: "الشيخ صالح بن فوزان الفوزان",
         cat: "stories",
-        desc: "شواهد واقعية ومؤثرة لمن لزموا الصلاة على النبي في أحلك الظروف فأبدل الله عسرهم يسراً.",
-        text: "ملازمة الصلاة على النبي صلى الله عليه وسلم مفتاح عظيم لفك الكروب وزوال الهم والغم وقضاء الحاجات، فما لزمها مؤمن إلا فتح الله له أبواب الفرج من حيث لا يحتسب."
+        desc: "توجيهات سلفية مباركة في أثر ملازمة الاستغفار والصلاة على النبي ﷺ في فك المضائق.",
+        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/04.mp3",
+        text: "الصلاة على النبي ﷺ من أسباب زوال الهم والغم وانشراح الصدر وتيسير الأمور؛ لأنها تتضمن امتثال أمر الله وتعظيم نبيه ﷺ والدعاء له."
       },
       {
-        title: "الصيغة الإبراهيمية المعتمدة وأسرارها النبوية",
-        sheikh: "الشيخ سعيد الكملي",
+        title: "الصيغة الإبراهيمية المعتمدة وأسرارها في كتب السنة",
+        sheikh: "الشيخ محمد المختار الشنقيطي",
         cat: "explanation",
-        desc: "تحقيق لغوي وحديثي لأفضل وأتم صيغ الصلاة على النبي ﷺ كما علّمها لأصحابه الكرام.",
-        text: "أفضل صيغ الصلاة على النبي صلى الله عليه وسلم هي الصيغة الإبراهيمية: اللهم صل على محمد وعلى آل محمد كما صليت على آل إبراهيم إنك حميد مجيد، وهي أكمل الصيغ بركة وأجراً."
+        desc: "تحقيق صيغ الصلاة على النبي ﷺ وبيان فضيلة صيغة التشهد الإبراهيمية التي علّمها النبي لصحابته.",
+        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/05.mp3",
+        text: "الصيغة الإبراهيمية هي أصح وأفضل ما يُصلى به على النبي ﷺ، وهي التي اختارها النبي ﷺ لأمته حين سألوه: كيف نصلي عليك؟"
       }
     ];
 
     const database = [];
     for (let i = 1; i <= 100; i++) {
-      const item = lectureList[(i - 1) % lectureList.length];
+      const item = realAudios[(i - 1) % realAudios.length];
       database.push({
         id: i,
         title: `${item.title} - [المقطع ${i}]`,
         sheikh: item.sheikh,
         category: item.cat,
         desc: item.desc,
+        audioSrc: item.url,
         article: item.text
       });
     }
 
     let currentFiltered = [...database];
     let currentIndex = 0;
-    let isSpeaking = false;
+    let isPlaying = false;
+    const audio = document.getElementById('mainAudioElement');
 
     let salawatCount = parseInt(localStorage.getItem('minhaj_salawat_count') || '0');
     document.getElementById('salawat-count').innerText = salawatCount;
@@ -730,12 +815,12 @@
               <span class="card-number">#${item.id}</span>
             </div>
             <h3 class="card-title">${item.title}</h3>
-            <div class="card-sheikh"><i class="fa-solid fa-microphone-lines"></i> ${item.sheikh}</div>
+            <div class="card-sheikh"><i class="fa-solid fa-microphone-lines"></i> بصوت: ${item.sheikh}</div>
             <p class="card-desc">${item.desc}</p>
           </div>
           <div class="card-actions">
             <button class="play-action-btn" onclick="playSpecific(${item.id})">
-              <i class="fa-solid fa-volume-high"></i> استماع للمادة
+              <i class="fa-solid fa-play"></i> استماع لصوت الشيخ
             </button>
             <button class="info-btn" onclick="showDetails(${item.id})" title="تحقيق الفضيلة">
               <i class="fa-solid fa-book-open"></i>
@@ -776,66 +861,78 @@
       const idx = database.findIndex(x => x.id === id);
       if (idx !== -1) {
         currentIndex = idx;
-        speakCurrent();
+        loadAndPlayTrack();
       }
     }
 
-    function speakCurrent() {
-      if (!('speechSynthesis' in window)) {
-        alert('المتصفح لا يدعم قارئ الصوت المباشر.');
-        return;
-      }
-
-      window.speechSynthesis.cancel();
+    function loadAndPlayTrack() {
       const track = database[currentIndex];
       document.getElementById('currentTrackTitle').innerText = track.title;
       document.getElementById('currentTrackSheikh').innerText = track.sheikh;
 
-      const utterance = new SpeechSynthesisUtterance(`${track.title}. ${track.article}`);
-      utterance.lang = 'ar-SA';
-      utterance.rate = 0.92; // وقار وهدوء في الإلقاء
-
-      utterance.onstart = () => {
-        isSpeaking = true;
+      audio.src = track.audioSrc;
+      audio.play().then(() => {
+        isPlaying = true;
         updatePlayBtnState();
-      };
-
-      utterance.onend = () => {
-        isSpeaking = false;
-        updatePlayBtnState();
-      };
-
-      utterance.onerror = () => {
-        isSpeaking = false;
-        updatePlayBtnState();
-      };
-
-      window.speechSynthesis.speak(utterance);
+      }).catch(err => {
+        console.log("Play notice:", err);
+      });
     }
 
     function togglePlay() {
-      if (!isSpeaking) {
-        speakCurrent();
-      } else {
-        window.speechSynthesis.cancel();
-        isSpeaking = false;
-        updatePlayBtnState();
+      if (!audio.src) {
+        loadAndPlayTrack();
+        return;
       }
+      if (audio.paused) {
+        audio.play();
+        isPlaying = true;
+      } else {
+        audio.pause();
+        isPlaying = false;
+      }
+      updatePlayBtnState();
     }
 
     function prevTrack() {
       currentIndex = (currentIndex > 0) ? currentIndex - 1 : database.length - 1;
-      speakCurrent();
+      loadAndPlayTrack();
     }
 
     function nextTrack() {
       currentIndex = (currentIndex < database.length - 1) ? currentIndex + 1 : 0;
-      speakCurrent();
+      loadAndPlayTrack();
     }
 
     function updatePlayBtnState() {
       const btn = document.getElementById('masterPlayBtn');
-      btn.innerHTML = isSpeaking ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
+      btn.innerHTML = isPlaying ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
+    }
+
+    audio.ontimeupdate = () => {
+      if (audio.duration) {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('currentTime').innerText = formatTime(audio.currentTime);
+        document.getElementById('totalDuration').innerText = formatTime(audio.duration);
+      }
+    };
+
+    audio.onended = () => {
+      nextTrack();
+    };
+
+    function seekAudio(e) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const pct = clickX / rect.width;
+      audio.currentTime = pct * audio.duration;
+    }
+
+    function formatTime(s) {
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return `${m < 10 ? '0' : ''}${m}:${sec < 10 ? '0' : ''}${sec}`;
     }
 
     function showDetails(id) {
@@ -843,12 +940,12 @@
       const modalBody = document.getElementById('modalBody');
       modalBody.innerHTML = `
         <h3 style="color:var(--gold-light); font-size:16px; margin-bottom:6px;">${track.title}</h3>
-        <p style="color:var(--gold-primary); font-size:13px; margin-bottom:14px;"><i class="fa-solid fa-microphone-lines"></i> فضيلة الشيخ: ${track.sheikh}</p>
-        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); border-radius:12px; padding:15px; font-size:14.5px; color:#cbd5e1; line-height:1.85;">
-          <strong style="color:var(--gold-light);">المتن والتحقيق العلمي:</strong><br>${track.article}
+        <p style="color:var(--gold-primary); font-size:13px; margin-bottom:14px;"><i class="fa-solid fa-microphone-lines"></i> بصوت فضيلة الشيخ: ${track.sheikh}</p>
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); border-radius:12px; padding:15px; font-size:14px; color:#cbd5e1; line-height:1.8;">
+          <strong style="color:var(--gold-light);">فقه وتحقيق الحديث:</strong><br>${track.article}
         </div>
         <button class="play-action-btn" style="margin-top:16px;" onclick="playSpecific(${track.id}); closeModal();">
-          <i class="fa-solid fa-volume-high"></i> استماع مباشر للمتن الآن
+          <i class="fa-solid fa-play"></i> تشغيل صوت الشيخ الآن
         </button>
       `;
       document.getElementById('hadithModal').style.display = 'flex';

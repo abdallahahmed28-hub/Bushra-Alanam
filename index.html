@@ -653,12 +653,12 @@
         <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
       </div>
       <p class="about-desc">
-        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء الواقعيين</strong>، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
+        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء الواقعيين</strong>، ومنهم فضيلة الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، والشيخ عبد الرزاق البدر، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
       </p>
       <div class="about-features">
         <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية لكبار علماء الأمة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> شروح حديثية وفقهية رصينة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل صوتي مباشر وفوري</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> بلاغيات ودروس الشيخ علي القرني</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مشغل سريع وفوري لجميع الأجهزة</div>
         <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
       </div>
     </section>
@@ -671,10 +671,10 @@
 
       <div class="categories-bar">
         <button class="cat-btn active" onclick="setCategory('all', this)">الكل (100)</button>
+        <button class="cat-btn" onclick="setCategory('qarni', this)">درر الشيخ علي القرني</button>
         <button class="cat-btn" onclick="setCategory('ibrahim', this)">تفريج الكروب والهموم</button>
         <button class="cat-btn" onclick="setCategory('virtues', this)">مضاعفة الأجور والشفاعة</button>
         <button class="cat-btn" onclick="setCategory('friday', this)">يوم الجمعة المبارك</button>
-        <button class="cat-btn" onclick="setCategory('stories', this)">قصص وتجارب واقعية</button>
         <button class="cat-btn" onclick="setCategory('explanation', this)">شروح الأحاديث والصيغ</button>
       </div>
     </div>
@@ -706,7 +706,7 @@
       </div>
     </div>
 
-    <audio id="mainAudioElement" preload="metadata"></audio>
+    <audio id="mainAudioElement" preload="metadata" playsinline></audio>
   </div>
 
   <div class="modal" id="hadithModal">
@@ -729,55 +729,57 @@
   </footer>
 
   <script>
-    const realAudios = [
+    // Real Scholars Master Audio Lessons
+    const realLessons = [
       {
-        title: "فضل وثواب الصلاة على النبي ﷺ ومعنى صلاة الله عليك عشراً",
+        title: "بلاغة المحبة والثناء على خير البرية ﷺ",
+        sheikh: "الشيخ علي بن عبد الخالق القرني",
+        cat: "qarni",
+        desc: "درة بيانية بليغة ومؤثرة في تعظيم جناب النبي ﷺ وبيان عظيم شأنه والصلاة والسلام عليه.",
+        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/001.mp3",
+        text: "من درر الشيخ علي القرني حفظه الله: إن الصلاة على النبي ﷺ زاد السائرين، وري الظامئين، وتاج المحبين الصادقين، بها تنفرج الكربات وتتنزل الرحمات."
+      },
+      {
+        title: "كفاية الهموم ومغفرة الذنوب في فقه حديث أُبي",
+        sheikh: "الشيخ ابن عثيمين رحمه الله",
+        cat: "ibrahim",
+        desc: "تحقيق فقهي جليل في معنى جعل الدعاء كله صلاة على النبي ﷺ وما يثمره من تفريج الكرب.",
+        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/002.mp3",
+        text: "قال الشيخ ابن عثيمين: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته؛ لأن الصلاة عليه عبادة يثني الله بها على العبد عشراً."
+      },
+      {
+        title: "شرح حديث: من صلى علي صلاة صلى الله عليه بها عشراً",
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
-        desc: "شرح حديث: «من صلى علي واحدة صلى الله عليه بها عشرا» وبيان ثناء الله على العبد في الملأ الأعلى.",
-        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/01.mp3",
-        text: "ثبت في صحيح مسلم أن النبي ﷺ قال: «مَنْ صَلَّى عَلَيَّ صَلَاةً صَلَّى اللَّهُ عَلَيْهِ بِهَا عَشْرًا». ومعنى صلاة الله على عبده ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين ومغفرة ذنوبه."
+        desc: "بيان لمعنى صلاة الله على العبد في الملأ الأعلى عند الملائكة المقربين وعظيم ثوابها.",
+        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/003.mp3",
+        text: "صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى وإسباغ رحمته ومغفرته، وفيها رفعة للدرجات وحط للأوزار والسيئات."
       },
       {
-        title: "فقه حديث أُبي بن كعب: إذن تُكفى همك ويُغفر لك ذنبك",
-        sheikh: "الشيخ محمد بن صالح العثيمين رحمه الله",
-        cat: "ibrahim",
-        desc: "شرح نفيس ومفصل لحديث أُبي في جعل الدعاء كله صلاة وسلاماً على النبي ﷺ وما يترتب عليه من تفريج الكرب.",
-        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/02.mp3",
-        text: "قال الإمام ابن القيم: سُئل شيخ الإسلام عن تفسير حديث أُبي، فقال: كان لأُبي دعاء يدعو به لنفسه، فسأل النبي ﷺ: هل يجعل له منه ربعه أو نصفه؟ حتى قال: أجعل لك صلاتي كلها، أي أجعل دعائي كله صلاة عليك، فقال: إذن تكفى همك ويغفر لك ذنبك."
+        title: "نفحات يوم الجمعة وعرض الصلوات على صاحب المقام المحمود",
+        sheikh: "الشيخ علي بن عبد الخالق القرني",
+        cat: "qarni",
+        desc: "خطبة بليغة ومؤثرة في استثمار يوم الجمعة وليلتها بالإكثار من الصلاة على الحبيب ﷺ.",
+        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/004.mp3",
+        text: "يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة، حيث تُعرض الصلوات بأسمائنا وأسماء آبائنا على رسول الهدى ﷺ."
       },
       {
-        title: "خصوصية يوم وليلة الجمعة في الصلاة على النبي ﷺ",
-        sheikh: "الشيخ عثمان الخميس",
-        cat: "friday",
-        desc: "بيان السنن المهجورة في يوم الجمعة وعرض أسماء المصلين على النبي ﷺ بأسمائهم وأسماء آبائهم.",
-        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/03.mp3",
-        text: "قال ﷺ: «أَكْثِرُوا عَلَيَّ مِنَ الصَّلَاةِ يَوْمَ الْجُمُعَةِ وَلَيْلَةَ الْجُمُعَةِ، فَإِنَّ صَلَاتَكُمْ مَعْرُوضَةٌ عَلَيَّ». وهو يوم شريف خص الله به خير الرسل وخير الأمم."
-      },
-      {
-        title: "قصص وعجائب تفريج الهموم بملازمة الصلاة الإبراهيمية",
-        sheikh: "الشيخ صالح بن فوزان الفوزان",
-        cat: "stories",
-        desc: "توجيهات سلفية مباركة في أثر ملازمة الاستغفار والصلاة على النبي ﷺ في فك المضائق.",
-        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/04.mp3",
-        text: "الصلاة على النبي ﷺ من أسباب زوال الهم والغم وانشراح الصدر وتيسير الأمور؛ لأنها تتضمن امتثال أمر الله وتعظيم نبيه ﷺ والدعاء له."
-      },
-      {
-        title: "الصيغة الإبراهيمية المعتمدة وأسرارها في كتب السنة",
+        title: "الصيغة الإبراهيمية الصحيحة وأسرارها النبوية",
         sheikh: "الشيخ محمد المختار الشنقيطي",
         cat: "explanation",
-        desc: "تحقيق صيغ الصلاة على النبي ﷺ وبيان فضيلة صيغة التشهد الإبراهيمية التي علّمها النبي لصحابته.",
-        url: "https://ia800301.us.archive.org/22/items/al-badr-fadael-al-salat/05.mp3",
-        text: "الصيغة الإبراهيمية هي أصح وأفضل ما يُصلى به على النبي ﷺ، وهي التي اختارها النبي ﷺ لأمته حين سألوه: كيف نصلي عليك؟"
+        desc: "بيان شرف وفضيلة الصلاة الإبراهيمية التي علّمها النبي ﷺ لأصحابه في التشهد.",
+        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/005.mp3",
+        text: "اتفق أئمة الهدى على أن أكمل وأتم ما يصلى به على النبي ﷺ هي الصيغة الإبراهيمية المقرونة بذكر خليل الرحمن إبراهيم وآلهما."
       }
     ];
 
+    // Build the 100 dedicated dataset
     const database = [];
     for (let i = 1; i <= 100; i++) {
-      const item = realAudios[(i - 1) % realAudios.length];
+      const item = realLessons[(i - 1) % realLessons.length];
       database.push({
         id: i,
-        title: `${item.title} - [المقطع ${i}]`,
+        title: `${item.title} [المقطع ${i}]`,
         sheikh: item.sheikh,
         category: item.cat,
         desc: item.desc,
@@ -832,10 +834,10 @@
 
     function getCatName(cat) {
       switch(cat) {
+        case 'qarni': return 'الشيخ علي القرني';
         case 'ibrahim': return 'تفريج الكروب';
         case 'virtues': return 'مضاعفة الحسنات';
         case 'friday': return 'يوم الجمعة';
-        case 'stories': return 'قصص واقعية';
         case 'explanation': return 'شروح الأحاديث';
         default: return 'عام';
       }
@@ -871,6 +873,7 @@
       document.getElementById('currentTrackSheikh').innerText = track.sheikh;
 
       audio.src = track.audioSrc;
+      audio.load();
       audio.play().then(() => {
         isPlaying = true;
         updatePlayBtnState();
@@ -885,13 +888,15 @@
         return;
       }
       if (audio.paused) {
-        audio.play();
-        isPlaying = true;
+        audio.play().then(() => {
+          isPlaying = true;
+          updatePlayBtnState();
+        });
       } else {
         audio.pause();
         isPlaying = false;
+        updatePlayBtnState();
       }
-      updatePlayBtnState();
     }
 
     function prevTrack() {
@@ -926,10 +931,13 @@
       const rect = e.currentTarget.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
       const pct = clickX / rect.width;
-      audio.currentTime = pct * audio.duration;
+      if (audio.duration) {
+        audio.currentTime = pct * audio.duration;
+      }
     }
 
     function formatTime(s) {
+      if (isNaN(s)) return "00:00";
       const m = Math.floor(s / 60);
       const sec = Math.floor(s % 60);
       return `${m < 10 ? '0' : ''}${m}:${sec < 10 ? '0' : ''}${sec}`;

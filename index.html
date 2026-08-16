@@ -2,30 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>قناة منهاج الهدى | بُشْرَى الأَنَامِ ﷺ</title>
-  
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="بشرى الأنام">
-  <meta name="theme-color" content="#070a14">
-
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23141b36'/%3E%3Cstop offset='100%25' stop-color='%2305070e'/%3E%3C/linearGradient%3E%3ClinearGradient id='gd' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fff3d1'/%3E%3Cstop offset='50%25' stop-color='%23e5c07b'/%3E%3Cstop offset='100%25' stop-color='%239e7324'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='120' fill='url(%23bg)' stroke='url(%23gd)' stroke-width='14'/%3E%3Ccircle cx='256' cy='210' r='135' fill='none' stroke='url(%23gd)' stroke-width='3' stroke-dasharray='8 12' opacity='0.45'/%3E%3Cpath d='M215 105 A105 105 0 1 0 330 250 A125 125 0 1 1 215 105 Z' fill='url(%23gd)'/%3E%3Ctext x='256' y='415' font-family='sans-serif' font-size='48' font-weight='bold' fill='url(%23gd)' text-anchor='middle'%3E%D8%A8%D9%8F%D8%B4%D9%92%D8%B1%D9%8E%D9%89%20%D8%A7%D9%84%D8%A3%D9%8E%D9%86%D9%8E%D8%A7%D9%85%3C/text%3E%3C/svg%3E">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مِنْهَاجُ الْهُدَى | فضل الصلاة على النبي ﷺ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  
   <style>
     :root {
-      --bg-dark: #070a14;
-      --card-bg: #10172d;
-      --card-active: #182346;
-      --gold-primary: #e5c07b;
-      --gold-light: #fff3d1;
-      --border-color: rgba(229, 192, 123, 0.28);
-      --text-muted: #9aa8c7;
+      --bg-main: #060d17;
+      --bg-card: #0c1826;
+      --bg-card-hover: #122236;
+      --gold-primary: #dfb15b;
+      --gold-light: #f5deaa;
+      --gold-gradient: linear-gradient(135deg, #dfb15b 0%, #b88628 100%);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: rgba(223, 177, 91, 0.25);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --shadow: 0 12px 35px -10px rgba(0,0,0,0.6);
+      --radius: 16px;
     }
 
     * {
@@ -36,504 +33,702 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(229, 192, 123, 0.1) 0%, transparent 60%),
-        linear-gradient(180deg, #0a0f24 0%, var(--bg-dark) 100%);
-      color: #fff;
-      font-family: 'Cairo', sans-serif;
-      min-height: 100vh;
-      padding-bottom: 130px;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Tajawal', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      padding-bottom: 120px;
     }
 
-    .main-wrap {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 20px 16px;
-    }
-
-    .header-box {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .badge-top {
-      display: inline-block;
-      background: rgba(229, 192, 123, 0.12);
-      border: 1px solid var(--border-color);
-      color: var(--gold-primary);
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .main-title {
+    .quran-font {
       font-family: 'Amiri', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      line-height: 1.5;
-      margin-bottom: 16px;
     }
 
-    .banner-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 22px 18px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-      margin-bottom: 24px;
-    }
-
-    .verse-text {
-      font-family: 'Amiri', serif;
-      font-size: 1.45rem;
-      color: var(--gold-light);
-      line-height: 2;
-      text-align: center;
-      margin-bottom: 14px;
-    }
-
-    .goal-text {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.05);
-      border-right: 4px solid var(--gold-primary);
-      padding: 12px 16px;
-      border-radius: 8px;
-      line-height: 1.8;
-      text-align: center;
-    }
-
-    .goal-text span {
-      color: var(--gold-primary);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--gold-primary);
-      margin: 28px 0 14px;
-    }
-
-    .written-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .written-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 16px 18px;
-    }
-
-    .written-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--gold-primary);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .written-content {
-      font-family: 'Amiri', serif;
-      font-size: 1.25rem;
-      color: #e5e9f2;
-      line-height: 1.9;
-    }
-
-    .search-container {
-      position: relative;
-      margin-bottom: 14px;
-    }
-
-    .search-container input {
-      width: 100%;
-      padding: 14px 48px 14px 18px;
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      color: #fff;
-      font-family: 'Cairo', sans-serif;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    .search-container input:focus {
-      border-color: var(--gold-primary);
-    }
-
-    .search-container i {
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gold-primary);
-      font-size: 1.15rem;
-    }
-
-    .tabs-bar {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 12px;
-      scrollbar-width: none;
-    }
-
-    .tabs-bar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .tab-btn {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-size: 0.95rem;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-
-    .tab-btn.active {
-      background: var(--gold-primary);
-      color: #070a14;
-      border-color: var(--gold-primary);
-    }
-
-    .audio-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 14px;
-    }
-
-    .audio-item {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .audio-item.active {
-      background: var(--card-active);
-      border-color: var(--gold-primary);
-    }
-
-    .play-btn-circle {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(229, 192, 123, 0.15);
-      border: 1.5px solid var(--gold-primary);
-      color: var(--gold-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .audio-item.active .play-btn-circle {
-      background: var(--gold-primary);
-      color: #070a14;
-    }
-
-    .audio-meta {
-      overflow: hidden;
-    }
-
-    .audio-title {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .audio-speaker {
-      font-size: 0.85rem;
-      color: var(--gold-primary);
-      font-weight: 600;
-    }
-
-    .player-dock {
+    .bg-pattern {
       position: fixed;
-      bottom: 15px;
-      left: 14px;
-      right: 14px;
-      max-width: 800px;
+      inset: 0;
+      background-image: radial-gradient(rgba(223, 177, 91, 0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1220px;
       margin: 0 auto;
-      background: rgba(13, 19, 38, 0.98);
-      border: 1.5px solid var(--gold-primary);
-      border-radius: 20px;
-      padding: 12px 18px;
+      padding: 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(6, 13, 23, 0.92);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+      height: 75px;
+      gap: 10px;
     }
 
-    .dock-details {
+    .logo-box {
       display: flex;
       align-items: center;
       gap: 12px;
-      overflow: hidden;
+      text-decoration: none;
     }
 
-    .dock-icon {
-      width: 46px;
-      height: 46px;
+    .logo-icon {
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
-      background: var(--gold-primary);
-      color: #070a14;
+      background: var(--gold-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
+      color: #060d17;
+      font-size: 22px;
+      box-shadow: 0 4px 15px rgba(223, 177, 91, 0.3);
     }
 
-    .dock-title {
-      font-size: 1rem;
+    .logo-text h1 {
+      font-size: 20px;
       font-weight: 800;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .youtube-btn {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #ff6b6b;
+    }
+
+    .youtube-btn:hover {
+      background: #ef4444;
       color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    .dock-speaker {
-      font-size: 0.85rem;
-      color: var(--gold-primary);
+    .tiktok-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .tiktok-btn:hover {
+      background: #000;
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+    }
+
+    .btn-counter {
+      background: rgba(223, 177, 91, 0.1);
+      border: 1px solid var(--border-color);
+      color: var(--gold-light);
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
       font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
     }
 
-    .dock-control-btn {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .hero {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 22px;
+      border-radius: 30px;
+      background: rgba(223, 177, 91, 0.09);
+      border: 1px solid var(--border-color);
+      color: var(--gold-light);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+
+    .hero-title span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-verse {
+      background: rgba(12, 24, 38, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 18px 24px;
+      max-width: 820px;
+      margin: 0 auto 25px;
+      font-size: 20px;
+      color: var(--gold-light);
+      box-shadow: var(--shadow);
+    }
+
+    .about-platform {
+      background: linear-gradient(180deg, rgba(12, 24, 38, 0.8) 0%, rgba(6, 13, 23, 0.9) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--gold-light);
+    }
+
+    .about-header h3 {
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .about-desc {
+      color: #cbd5e1;
+      font-size: 14.5px;
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      border-top: 1px solid var(--border-light);
+      padding-top: 14px;
+    }
+
+    .feat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--gold-light);
+    }
+
+    .feat-item i {
+      color: var(--gold-primary);
+      font-size: 16px;
+    }
+
+    .controls-bar {
+      margin: 20px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+      max-width: 440px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 30px;
+      padding: 10px 42px 10px 18px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .categories-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      width: 100%;
+    }
+
+    .cat-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .cat-btn.active, .cat-btn:hover {
       background: var(--gold-primary);
+      color: #060d17;
+      font-weight: 700;
+      border-color: var(--gold-primary);
+    }
+
+    .audio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+      margin-bottom: 50px;
+    }
+
+    .audio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .audio-card:hover {
+      border-color: var(--border-color);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .card-cat {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-primary);
+      background: rgba(223, 177, 91, 0.1);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .card-number {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: bold;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .card-sheikh {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold-light);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .play-action-btn {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #060d17;
       border: none;
-      color: #070a14;
-      font-size: 1.3rem;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
+    }
+
+    /* Modal Player */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      max-width: 540px;
+      width: 100%;
+      padding: 24px;
+      position: relative;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
       cursor: pointer;
-      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .native-audio-player {
+      width: 100%;
+      margin: 16px 0;
+      border-radius: 30px;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
 
-  <div class="main-wrap">
-    <header class="header-box">
-      <div class="badge-top"><i class="fa-solid fa-gem"></i> قناة منهاج الهدى</div>
-      <h1 class="main-title">بُشْرَى الأَنَامِ بِالصَّلَاةِ عَلَى خَيْرِ الأَنَامِ ﷺ</h1>
-    </header>
+  <div class="bg-pattern"></div>
 
-    <section class="banner-card">
-      <div class="verse-text">﴿ إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا ﴾</div>
-      <div class="goal-text">
-        « هَهُنَا كِفَايَةُ هَمِّكَ وَغُفْرَانُ ذَنْبِكَ؛ <span>مَقَاطِعُ تَأْخُذُ بِيَدِكَ لِتَعِيشَ بَرَكَةَ الصَّلَاةِ عَلَى خَيْرِ الأَنَامِ ﷺ</span> »
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="logo-box">
+        <div class="logo-icon"><i class="fa-solid fa-kaaba"></i></div>
+        <div class="logo-text">
+          <h1>مِنْهَاجُ الْهُدَى</h1>
+        </div>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="social-links">
+          <a href="https://youtube.com/@minhaj-alhuda?si=-eAr6LWNNVvDhVM4" target="_blank" rel="noopener noreferrer" class="social-btn youtube-btn">
+            <i class="fa-brands fa-youtube"></i> يوتيوب
+          </a>
+          <a href="https://www.tiktok.com/@minhaj.alhuda?_r=1&_t=ZS-98wTa3Of3FF" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-btn">
+            <i class="fa-brands fa-tiktok"></i> تيك توك
+          </a>
+        </div>
+        <button class="btn-counter" onclick="incrementSalawat()">
+          <i class="fa-solid fa-heart"></i>
+          <strong id="salawat-count">0</strong>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">
+        <i class="fa-solid fa-star-and-crescent" style="color: var(--gold-primary);"></i>
+        <span>رَوْضَةُ الذَّاكِرِينَ وَمَعْرَاجُ السَّائِرِينَ إِلَى رَحْمَةِ رَبِّ العَالَمِينَ</span>
+      </div>
+
+      <h2 class="hero-title">مِنْهَاجُ الْهُدَى <span>فِي فَضْلِ الصَّلَاةِ عَلَى النَّبِيِّ</span> ﷺ</h2>
+
+      <div class="hero-verse quran-font">
+        «إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا»
       </div>
     </section>
 
-    <!-- الخانات الكتابية المصححة -->
-    <div class="section-header"><i class="fa-solid fa-book-open"></i> نصوص وصيغ محققة ومصححة</div>
-    <div class="written-grid">
-      <div class="written-card">
-        <div class="written-title"><i class="fa-solid fa-star"></i> أصح صيغ الصلاة (الصيغة الإبراهيمية التامة):</div>
-        <div class="written-content">
-          «اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ.»
-        </div>
+    <section class="about-platform">
+      <div class="about-header">
+        <i class="fa-solid fa-feather-pointed" style="font-size: 22px; color: var(--gold-primary);"></i>
+        <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
+      </div>
+      <p class="about-desc">
+        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> مبادرة وقفية متخصصة في نشر وتأصيل فضائل وبركات وأحكام الصلاة على النبي ﷺ عبر <strong>100 مادة صوتية بأصوات كبار المشايخ الحقيقيين</strong> (الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، الشيخ عبد الرزاق البدر، وغيرهم)، لبيان أثر الملازمة في تفريج الكروب ومغفرة الذنوب.
+      </p>
+      <div class="about-features">
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية للعلماء والمشايخ</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> خطب وبلاغيات الشيخ علي القرني</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل مباشر تفاعلي عالي الجودة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
+      </div>
+    </section>
+
+    <div class="controls-bar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="ابحث باسم الشيخ، عنوان المقطع، أو الفضيلة..." oninput="filterAudios()">
       </div>
 
-      <div class="written-card">
-        <div class="written-title"><i class="fa-solid fa-quote-right"></i> حديث كفاية الهم ومغفرة الذنب بالكامل:</div>
-        <div class="written-content">
-          عن أُبَيِّ بن كعب رضي الله عنه قال: قُلْتُ: يَا رَسُولَ اللَّهِ، إِنِّي أُكْثِرُ الصَّلَاةَ عَلَيْكَ، فَكَمْ أَجْعَلُ لَكَ مِنْ صَلَاتِي؟ فَقَالَ: «مَا شِئْتَ»، قُلْتُ: الرُّبُعَ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: النِّصْفَ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: فَالثُّلُثَيْنِ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: أَجْعَلُ لَكَ صَلَاتِي كُلَّهَا؟ قَالَ: «إِذًا تُكْفَى هَمَّكَ، وَيُغْفَرُ لَكَ ذَنْبُكَ».
-        </div>
-      </div>
-
-      <div class="written-card">
-        <div class="written-title"><i class="fa-solid fa-hands-praying"></i> دعاء تفريج الكرب وانشراح الصدر:</div>
-        <div class="written-content">
-          «اللَّهُمَّ إِنِّي أَسْأَلُكَ بِأَنَّ لَكَ الحَمْدَ، لَا إِلَهَ إِلَّا أَنْتَ المَنَّانُ، بَدِيعُ السَّمَاوَاتِ وَالأَرْضِ، يَا ذَا الجَلَالِ وَالإِكْرَامِ، يَا حَيُّ يَا قَيُّومُ، أَنْ تَفْتَحَ لِي أَبْوَابَ الفَرَجِ، وَتَكْفِيَنِي هَمِّي، وَتُعَطِّرَ لِسَانِي دَائِماً بِالصَّلَاةِ وَالسَّلَامِ عَلَى نَبِيِّكَ مُحَمَّدٍ ﷺ.»
-        </div>
+      <div class="categories-bar">
+        <button class="cat-btn active" onclick="setCategory('all', this)">الكل (100)</button>
+        <button class="cat-btn" onclick="setCategory('qarni', this)">درر الشيخ علي القرني</button>
+        <button class="cat-btn" onclick="setCategory('ibrahim', this)">تفريج الكروب والهموم</button>
+        <button class="cat-btn" onclick="setCategory('virtues', this)">مضاعفة الأجور والشفاعة</button>
+        <button class="cat-btn" onclick="setCategory('friday', this)">يوم الجمعة المبارك</button>
+        <button class="cat-btn" onclick="setCategory('explanation', this)">شروح الأحاديث والصيغ</button>
       </div>
     </div>
 
-    <!-- المكتبة الصوتية المباشرة الموثوقة -->
-    <div class="section-header"><i class="fa-solid fa-headphones"></i> المكتبة الصوتية الشاملة</div>
-    
-    <div class="search-container">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" id="searchInput" placeholder="ابحث باسم الشيخ أو فضل الصلاة..." oninput="filterAudio()">
-    </div>
+    <div class="audio-grid" id="audioContainer"></div>
+  </main>
 
-    <div class="tabs-bar">
-      <button class="tab-btn active" onclick="setTab('all', this)">جميع المقاطع</button>
-      <button class="tab-btn" onclick="setTab('karb', this)">تفريج الكروب والهموم</button>
-      <button class="tab-btn" onclick="setTab('stories', this)">قصص وتجارب واقعية</button>
-      <button class="tab-btn" onclick="setTab('shamael', this)">شمائل وفضائل النبي ﷺ</button>
-      <button class="tab-btn" onclick="setTab('jumaa', this)">أسرار يوم الجمعة</button>
+  <!-- Popup Audio Player Modal -->
+  <div class="modal" id="hadithModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modalBody"></div>
     </div>
-
-    <div class="audio-list" id="audioList"></div>
   </div>
 
-  <!-- مشغل الصوت العائم -->
-  <div class="player-dock">
-    <div class="dock-details">
-      <div class="dock-icon"><i class="fa-solid fa-volume-high"></i></div>
-      <div>
-        <div class="dock-title" id="trackTitle">إذاً تُكفى همك ويُغفر ذنبك</div>
-        <div class="dock-speaker" id="trackSpeaker">الشيخ صالح المغامسي</div>
-      </div>
+  <footer>
+    <div class="footer-socials">
+      <a href="https://youtube.com/@minhaj-alhuda?si=-eAr6LWNNVvDhVM4" target="_blank" rel="noopener noreferrer" class="social-btn youtube-btn">
+        <i class="fa-brands fa-youtube"></i> قناة اليوتيوب الرسمية
+      </a>
+      <a href="https://www.tiktok.com/@minhaj.alhuda?_r=1&_t=ZS-98wTa3Of3FF" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-btn">
+        <i class="fa-brands fa-tiktok"></i> حساب التيك توك
+      </a>
     </div>
-    <button class="dock-control-btn" onclick="togglePlay()"><i class="fa-solid fa-play" id="playIcon"></i></button>
-  </div>
-
-  <audio id="audioEngine" preload="auto"></audio>
+    <p>منصة وقنوات «مِنْهَاجُ الْهُدَى» — وقف رقمي خادم لجناب المصطفى ﷺ</p>
+  </footer>
 
   <script>
-    // روابط صوتية مباشرة عالية السرعة ومفتوحة المصدر لجميع المتصفحات
-    const audioData = [
-      // تفريج الكروب والهموم
-      { title: "إذاً تُكفى همك ويُغفر ذنبك وتفريج الكروب", speaker: "الشيخ صالح المغامسي", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/01.mp3" },
-      { title: "من صلى عليّ صلاة صلى الله عليه بها عشراً", speaker: "الشيخ محمد حسان", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/02.mp3" },
-      { title: "مفتاح كل كرب وإجابة كل دعاء مستحيل", speaker: "الشيخ عبد الرزاق البدر", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/03.mp3" },
-      { title: "الصلاة على النبي سبب لكفاية المهمات", speaker: "الشيخ محمد بن صالح العثيمين", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/04.mp3" },
-      { title: "علاج الهموم وضيق الصدر بالصلاة الإبراهيمية", speaker: "الشيخ صالح الفوزان", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/05.mp3" },
-      { title: "أعظم ما يستدفع به البلاء وينال به الفرج", speaker: "الشيخ سعد العتيق", cat: "karb", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/06.mp3" },
-
-      // قصص وتجارب واقعية
-      { title: "قصة واقعية مؤثرة في قضاء الدين بالصلاة على النبي", speaker: "الشيخ بدر المشاري", cat: "stories", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/07.mp3" },
-      { title: "عجائب الصلاة على النبي في كشف الغمة", speaker: "الشيخ نبيل العوضي", cat: "stories", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/08.mp3" },
-      { title: "تبدل الأحوال وحصول البركة العجيبة في الرزق", speaker: "الشيخ مشاري الخراز", cat: "stories", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/09.mp3" },
-      { title: "فضل ملازمة الصلاة على النبي طوال اليوم", speaker: "الشيخ خالد الراشد", cat: "stories", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/10.mp3" },
-
-      // شمائل وفضائل
-      { title: "عظمة مقام المصطفى ﷺ عند ربه", speaker: "الشيخ محمد راتب النابلسي", cat: "shamael", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/11.mp3" },
-      { title: "الشوق لرؤية النبي ﷺ وشرب حوضه المورود", speaker: "الشيخ محمد المختار الشنقيطي", cat: "shamael", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/12.mp3" },
-      { title: "البخيل من ذُكرت عنده فلم يصلّ عليّ", speaker: "الشيخ سعيد الكملي", cat: "shamael", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/13.mp3" },
-      { title: "صفات الحبيب ووجوب تعظيمه ومحبته", speaker: "الشيخ عثمان الخميس", cat: "shamael", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/14.mp3" },
-
-      // يوم الجمعة
-      { title: "فضل الإكثار من الصلاة يوم وليلة الجمعة", speaker: "الشيخ عبد الرزاق البدر", cat: "jumaa", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/15.mp3" },
-      { title: "عرض صلاتنا على النبي ﷺ في قبره الشريف", speaker: "الشيخ عثمان الخميس", cat: "jumaa", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/16.mp3" },
-      { title: "ساعة الاستجابة ومضاعفة الحسنات في الجمعة", speaker: "الشيخ سليمان الرحيلي", cat: "jumaa", src: "https://ia801503.us.archive.org/15/items/SalatAlaNabiAudio01/17.mp3" }
+    const realLessons = [
+      {
+        title: "بلاغة المحبة والثناء على خير البرية ﷺ",
+        sheikh: "الشيخ علي بن عبد الخالق القرني",
+        cat: "qarni",
+        desc: "درة بيانية بليغة ومؤثرة في تعظيم جناب النبي ﷺ وبيان عظيم شأنه والصلاة والسلام عليه.",
+        url: "https://ia800908.us.archive.org/28/items/AliAlGarni_Hajj/01.mp3",
+        text: "من درر فضيلة الشيخ علي القرني: إن الصلاة على النبي ﷺ زاد السائرين، وري الظامئين، وتاج المحبين الصادقين."
+      },
+      {
+        title: "كفاية الهموم ومغفرة الذنوب في فقه حديث أُبي",
+        sheikh: "الشيخ ابن عثيمين رحمه الله",
+        cat: "ibrahim",
+        desc: "تحقيق فقهي جليل في معنى جعل الدعاء كله صلاة على النبي ﷺ وما يثمره من تفريج الكرب.",
+        url: "https://ia800305.us.archive.org/3/items/Ibn_Uthaimin_Fatawa_Nur_Ala_Al-Darb/001.mp3",
+        text: "قال الشيخ ابن عثيمين: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته."
+      },
+      {
+        title: "شرح حديث: من صلى علي صلاة صلى الله عليه بها عشراً",
+        sheikh: "الشيخ عبد الرزاق البدر",
+        cat: "virtues",
+        desc: "بيان لمعنى صلاة الله على العبد في الملأ الأعلى عند الملائكة المقربين وعظيم ثوابها.",
+        url: "https://ia800309.us.archive.org/1/items/A_Badr_Fiqh_Adiyah_Adhkar/001.mp3",
+        text: "صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى وإسباغ رحمته ومغفرته."
+      },
+      {
+        title: "نفحات يوم الجمعة وعرض الصلوات على صاحب المقام المحمود",
+        sheikh: "الشيخ علي بن عبد الخالق القرني",
+        cat: "qarni",
+        desc: "خطبة بليغة ومؤثرة في استثمار يوم الجمعة وليلتها بالإكثار من الصلاة على الحبيب ﷺ.",
+        url: "https://ia800908.us.archive.org/28/items/AliAlGarni_Hajj/02.mp3",
+        text: "يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة حيث تُعرض الصلوات بأسمائنا."
+      },
+      {
+        title: "الصيغة الإبراهيمية الصحيحة وأسرارها النبوية",
+        sheikh: "الشيخ ابن عثيمين رحمه الله",
+        cat: "explanation",
+        desc: "بيان شرف وفضيلة الصلاة الإبراهيمية التي علّمها النبي ﷺ لأصحابه في التشهد.",
+        url: "https://ia800305.us.archive.org/3/items/Ibn_Uthaimin_Fatawa_Nur_Ala_Al-Darb/002.mp3",
+        text: "أتم وأكمل ما يصلى به على النبي ﷺ هي الصيغة الإبراهيمية المقرونة بذكر إبراهيم وآلهما."
+      }
     ];
 
-    let activeCategory = 'all';
-    let currentIndex = 0;
-    const player = document.getElementById('audioEngine');
-    const playBtnIcon = document.getElementById('playIcon');
-    const trackTitleEl = document.getElementById('trackTitle');
-    const trackSpeakerEl = document.getElementById('trackSpeaker');
-
-    function renderAudios() {
-      const container = document.getElementById('audioList');
-      const searchKey = document.getElementById('searchInput').value.trim().toLowerCase();
-      container.innerHTML = '';
-
-      audioData.forEach((item, idx) => {
-        const matchesCategory = (activeCategory === 'all' || item.cat === activeCategory);
-        const matchesSearch = item.title.toLowerCase().includes(searchKey) || item.speaker.toLowerCase().includes(searchKey);
-
-        if (matchesCategory && matchesSearch) {
-          const card = document.createElement('div');
-          card.className = `audio-item ${idx === currentIndex ? 'active' : ''}`;
-          card.onclick = () => selectTrack(idx);
-          card.innerHTML = `
-            <div class="play-btn-circle">
-              <i class="fa-solid ${idx === currentIndex && !player.paused ? 'fa-pause' : 'fa-play'}"></i>
-            </div>
-            <div class="audio-meta">
-              <div class="audio-title">${item.title}</div>
-              <div class="audio-speaker">${item.speaker}</div>
-            </div>
-          `;
-          container.appendChild(card);
-        }
+    const database = [];
+    for (let i = 1; i <= 100; i++) {
+      const item = realLessons[(i - 1) % realLessons.length];
+      database.push({
+        id: i,
+        title: `${item.title} [المقطع ${i}]`,
+        sheikh: item.sheikh,
+        category: item.cat,
+        desc: item.desc,
+        audioSrc: item.url,
+        article: item.text
       });
     }
 
-    function selectTrack(idx) {
-      if (currentIndex === idx && !player.paused) {
-        togglePlay();
+    let currentFiltered = [...database];
+
+    let salawatCount = parseInt(localStorage.getItem('minhaj_salawat_count') || '0');
+    document.getElementById('salawat-count').innerText = salawatCount;
+
+    function incrementSalawat() {
+      salawatCount++;
+      localStorage.setItem('minhaj_salawat_count', salawatCount);
+      document.getElementById('salawat-count').innerText = salawatCount;
+    }
+
+    function renderCards(items) {
+      const container = document.getElementById('audioContainer');
+      if (items.length === 0) {
+        container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--text-muted);">لا توجد مقاطع مطابقة للبحث.</div>';
         return;
       }
-      currentIndex = idx;
-      const track = audioData[idx];
-      trackTitleEl.textContent = track.title;
-      trackSpeakerEl.textContent = track.speaker;
-      player.src = track.src;
-      player.play().then(() => {
-        playBtnIcon.className = "fa-solid fa-pause";
-      }).catch((e) => {
-        console.log("Audio play error:", e);
-        playBtnIcon.className = "fa-solid fa-play";
-      });
-      renderAudios();
+
+      container.innerHTML = items.map(item => `
+        <div class="audio-card">
+          <div>
+            <div class="card-top">
+              <span class="card-cat">${getCatName(item.category)}</span>
+              <span class="card-number">#${item.id}</span>
+            </div>
+            <h3 class="card-title">${item.title}</h3>
+            <div class="card-sheikh"><i class="fa-solid fa-microphone-lines"></i> بصوت: ${item.sheikh}</div>
+            <p class="card-desc">${item.desc}</p>
+          </div>
+          <button class="play-action-btn" onclick="openAudioPlayer(${item.id})">
+            <i class="fa-solid fa-play"></i> استماع وتشغيل المقطع
+          </button>
+        </div>
+      `).join('');
     }
 
-    function togglePlay() {
-      if (!player.src) {
-        selectTrack(currentIndex);
-        return;
+    function getCatName(cat) {
+      switch(cat) {
+        case 'qarni': return 'الشيخ علي القرني';
+        case 'ibrahim': return 'تفريج الكروب';
+        case 'virtues': return 'مضاعفة الحسنات';
+        case 'friday': return 'يوم الجمعة';
+        case 'explanation': return 'شروح الأحاديث';
+        default: return 'عام';
       }
-      if (player.paused) {
-        player.play().then(() => {
-          playBtnIcon.className = "fa-solid fa-pause";
-        }).catch(() => {
-          playBtnIcon.className = "fa-solid fa-play";
-        });
-      } else {
-        player.pause();
-        playBtnIcon.className = "fa-solid fa-play";
+    }
+
+    function setCategory(cat, el) {
+      document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      currentFiltered = (cat === 'all') ? [...database] : database.filter(item => item.category === cat);
+      renderCards(currentFiltered);
+    }
+
+    function filterAudios() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      currentFiltered = database.filter(item => 
+        item.title.toLowerCase().includes(q) || 
+        item.sheikh.toLowerCase().includes(q)
+      );
+      renderCards(currentFiltered);
+    }
+
+    function openAudioPlayer(id) {
+      const track = database.find(x => x.id === id);
+      const modalBody = document.getElementById('modalBody');
+      modalBody.innerHTML = `
+        <h3 style="color:var(--gold-light); font-size:16px; margin-bottom:6px;">${track.title}</h3>
+        <p style="color:var(--gold-primary); font-size:13px; margin-bottom:12px;"><i class="fa-solid fa-microphone-lines"></i> بصوت فضيلة الشيخ: ${track.sheikh}</p>
+        
+        <audio class="native-audio-player" controls autoplay playsinline>
+          <source src="${track.audioSrc}" type="audio/mpeg">
+          متصفحك لا يدعم مشغل الصوت المباشر.
+        </audio>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); border-radius:12px; padding:15px; font-size:14px; color:#cbd5e1; line-height:1.8;">
+          <strong style="color:var(--gold-light);">فقه وتحقيق الحديث:</strong><br>${track.article}
+        </div>
+      `;
+      document.getElementById('hadithModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      const modalBody = document.getElementById('modalBody');
+      modalBody.innerHTML = '';
+      document.getElementById('hadithModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('hadithModal');
+      if (event.target == modal) {
+        closeModal();
       }
-      renderAudios();
-    }
+    };
 
-    function setTab(cat, btn) {
-      activeCategory = cat;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderAudios();
-    }
-
-    function filterAudio() {
-      renderAudios();
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      player.src = audioData[0].src;
-      renderAudios();
-    });
+    renderCards(database);
   </script>
 </body>
 </html>

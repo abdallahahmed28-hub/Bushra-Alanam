@@ -10,10 +10,11 @@
   <meta name="apple-mobile-web-app-title" content="بشرى الأنام">
   <meta name="theme-color" content="#050814">
 
+  <!-- أيقونة الشاشة الرئيسية الملكية المدمجة -->
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='b' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23121936'/%3E%3Cstop offset='100%25' stop-color='%23050711'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fff3d1'/%3E%3Cstop offset='50%25' stop-color='%23e5c07b'/%3E%3Cstop offset='100%25' stop-color='%239e7324'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='120' fill='url(%23b)' stroke='url(%23g)' stroke-width='14'/%3E%3Ccircle cx='256' cy='210' r='135' fill='none' stroke='url(%23g)' stroke-width='3' stroke-dasharray='8 12' opacity='0.45'/%3E%3Cpath d='M215 105 A105 105 0 1 0 330 250 A125 125 0 1 1 215 105 Z' fill='url(%23g)'/%3E%3Cpolygon points='330,125 340,150 365,150 345,165 352,190 330,175 308,190 315,165 295,150 320,150' fill='url(%23g)'/%3E%3Ctext x='256' y='405' font-family='sans-serif' font-size='44' font-weight='bold' fill='url(%23g)' text-anchor='middle'%3E%D8%A8%D9%8F%D8%B4%D9%92%D8%B1%D9%8E%D9%89 %D8%A7%D9%84%D8%A3%D9%8E%D9%86%D9%8E%D8%A7%D9%85%3C/text%3E%3Ctext x='256' y='455' font-family='sans-serif' font-size='22' fill='%23a3adc9' text-anchor='middle'%3E%D9%85%D9%86%D9%87%D8%A7%D8%AC %D8%A7%D9%84%D9%87%D8%AF%D9%89%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -40,10 +41,11 @@
       color: #fff;
       font-family: 'Tajawal', sans-serif;
       min-height: 100vh;
-      padding-bottom: 130px;
+      padding-bottom: 140px;
     }
 
     .container { max-width: 1050px; margin: 0 auto; padding: 16px 14px; }
+    
     .header-box { text-align: center; padding: 10px 0 16px; }
 
     .channel-badge {
@@ -106,39 +108,60 @@
     .target-callout span { color: var(--gold-champagne); }
     .hero-sub { font-size: 0.86rem; color: var(--text-sub); }
 
-    .cinema-wrapper {
-      background: #000;
-      border: 1.5px solid var(--gold-champagne);
-      border-radius: 18px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.8);
-      display: none;
+    /* قسم الخانات الكتابية المصححة */
+    .section-title {
+      font-family: 'Amiri', serif;
+      font-size: 1.35rem;
+      color: var(--gold-bright);
+      margin: 22px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .video-aspect-box { position: relative; padding-bottom: 56.25%; height: 0; }
-    .video-aspect-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .texts-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
 
-    .cinema-bar {
-      background: #0a0f24;
-      padding: 10px 16px;
+    .text-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-royal);
+      border-radius: 14px;
+      padding: 14px 16px;
+      transition: all 0.25s;
+    }
+
+    .text-card-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid var(--border-royal);
-    }
-
-    .cinema-title { font-size: 0.9rem; font-weight: 700; color: var(--gold-champagne); }
-    .close-video-btn {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid var(--border-royal);
-      color: #fff;
-      padding: 4px 12px;
-      border-radius: 8px;
-      font-size: 0.8rem;
       cursor: pointer;
     }
 
+    .text-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold-champagne);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .text-card-body {
+      font-size: 0.9rem;
+      color: #e0e5f2;
+      line-height: 1.8;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(229, 192, 123, 0.15);
+      font-family: 'Amiri', serif;
+      font-size: 1.05rem;
+    }
+
+    /* شريط البحث والتصنيفات */
     .search-input-wrap { position: relative; margin-bottom: 14px; }
     .search-input-wrap input {
       width: 100%;
@@ -180,6 +203,7 @@
       box-shadow: 0 4px 14px rgba(229,192,123,0.35);
     }
 
+    /* شبكة بطاقات المقاطع الصوتية */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -209,30 +233,18 @@
     .content-card:hover, .content-card:active { border-color: var(--gold-champagne); transform: translateY(-3px); }
     .content-card.active { background: var(--card-active); border-color: var(--gold-champagne); box-shadow: 0 0 16px rgba(229,192,123,0.4); }
 
-    .badge-kind {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      font-size: 0.68rem;
-      padding: 2px 6px;
-      border-radius: 6px;
-      background: rgba(229, 192, 123, 0.15);
-      color: var(--gold-bright);
-      border: 1px solid var(--border-royal);
-    }
-
     .play-orb {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       background: rgba(6, 9, 20, 0.9);
       border: 1.5px solid var(--gold-champagne);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 12px 0 8px;
+      margin: 8px 0;
       color: var(--gold-champagne);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     .content-card.active .play-orb { background: var(--gold-gradient); color: #050814; box-shadow: 0 0 12px rgba(229,192,123,0.5); }
@@ -240,6 +252,7 @@
     .item-speaker { font-size: 0.78rem; color: var(--gold-champagne); margin-bottom: 6px; }
     .item-tag { font-size: 0.72rem; color: var(--text-sub); background: rgba(255, 255, 255, 0.05); padding: 2px 8px; border-radius: 10px; }
 
+    /* المشغل الصوتي الملكي العائم */
     .master-dock {
       position: fixed;
       bottom: 14px;
@@ -303,36 +316,60 @@
     <section class="hero-card">
       <div class="quran-verse">﴿ إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا ﴾</div>
       <div class="target-callout">« هَهُنَا كِفَايَةُ هَمِّكَ وَغُفْرَانُ ذَنْبِكَ؛ <span>مَقَاطِعُ تَأْخُذُ بِيَدِكَ لِتَعِيشَ بَرَكَةَ الصَّلَاةِ عَلَى خَيْرِ الأَنَامِ ﷺ</span> »</div>
-      <p class="hero-sub">صرح إيماني جامع لروائع المقاطع المرئية والمحاضرات الصوتية في تفريج الكروب والشمائل النبوية</p>
+      <p class="hero-sub">صرح إيماني جامع لروائع الصوتيات المحققة، الخانات الكتابية المصححة، وفضائل تفريج الكروب</p>
     </section>
 
-    <div class="cinema-wrapper" id="cinemaBox">
-      <div class="video-aspect-box">
-        <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- الخانات الكتابية المصححة -->
+    <div class="section-title"><i class="fa-solid fa-book-quran"></i> خانات كتابية محققة ومصححة</div>
+    <div class="texts-accordion">
+      <div class="text-card">
+        <div class="text-card-head">
+          <div class="text-card-title"><i class="fa-solid fa-star-and-crescent"></i> الصيغة الإبراهيمية التامة (أصح الصيغ)</div>
+        </div>
+        <div class="text-card-body">
+          «اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ.»
+        </div>
       </div>
-      <div class="cinema-bar">
-        <div class="cinema-title" id="cinemaTitle">المشغل المرئي المباشر</div>
-        <button class="close-video-btn" onclick="closeCinema()"><i class="fa-solid fa-xmark"></i> إغلاق</button>
+
+      <div class="text-card">
+        <div class="text-card-head">
+          <div class="text-card-title"><i class="fa-solid fa-quote-right"></i> حديث كفاية الهم ومغفرة الذنب (حديث أبيّ بن كعب)</div>
+        </div>
+        <div class="text-card-body">
+          قال أُبَيُّ بن كعب رضي الله عنه: يَا رَسُولَ اللَّهِ، إِنِّي أُكْثِرُ الصَّلَاةَ عَلَيْكَ، فَكَمْ أَجْعَلُ لَكَ مِنْ صَلَاتِي؟ فَقَالَ: «مَا شِئْتَ»، قَالَ: قُلْتُ: الرُّبُعَ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: النِّصْفَ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: فَالثُّلُثَيْنِ؟ قَالَ: «مَا شِئْتَ، فَإِنْ زِدْتَ فَهُوَ خَيْرٌ لَكَ»، قُلْتُ: أَجْعَلُ لَكَ صَلَاتِي كُلَّهَا؟ قَالَ: «إِذًا تُكْفَى هَمَّكَ، وَيُغْفَرُ لَكَ ذَنْبُكَ».
+        </div>
+      </div>
+
+      <div class="text-card">
+        <div class="text-card-head">
+          <div class="text-card-title"><i class="fa-solid fa-hands-holding-circle"></i> دعاء كشف الكرب وانشراح الصدر</div>
+        </div>
+        <div class="text-card-body">
+          «اللَّهُمَّ إِنِّي أَسْأَلُكَ بِأَنَّ لَكَ الحَمْدَ، لَا إِلَهَ إِلَّا أَنْتَ المَنَّانُ، بَدِيعُ السَّمَاوَاتِ وَالأَرْضِ، يَا ذَا الجَلَالِ وَالإِكْرَامِ، يَا حَيُّ يَا قَيُّومُ، أَنْ تَكْفِيَنِي مَا أَهَمَّنِي، وَأَنْ تُفَرِّجَ عَنِّي كُلَّ ضِيقٍ بِبَرَكَةِ الصَّلَاةِ وَالسَّلَامِ عَلَى نَبِيِّكَ مُحَمَّدٍ ﷺ.»
+        </div>
       </div>
     </div>
 
+    <!-- شريط البحث والتصنيفات -->
+    <div class="section-title"><i class="fa-solid fa-headphones"></i> المكتبة الصوتية الشاملة</div>
     <div class="search-input-wrap">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" id="searchInput" placeholder="ابحث عن مقطع، شيخ، أو فضل معين..." oninput="applyFilter()">
     </div>
 
     <div class="filter-tabs">
-      <button class="tab-pill active" onclick="setCategory('all', this)">كل الأبواب</button>
-      <button class="tab-pill" onclick="setCategory('video', this)"><i class="fa-solid fa-video"></i> مرئيات مؤثرة</button>
+      <button class="tab-pill active" onclick="setCategory('all', this)">كل المقاطع</button>
       <button class="tab-pill" onclick="setCategory('karb', this)">تفريج الكروب والهموم</button>
       <button class="tab-pill" onclick="setCategory('stories', this)">قصص وتجارب واقعية</button>
       <button class="tab-pill" onclick="setCategory('shamael', this)">شمائل ومحبة النبي ﷺ</button>
       <button class="tab-pill" onclick="setCategory('jumaa', this)">أسرار يوم الجمعة</button>
     </div>
 
+    <!-- شبكة المقاطع الصوتية -->
     <div class="grid-container" id="cardsGrid"></div>
   </div>
 
+  <!-- المشغل الصوتي العائم -->
   <div class="master-dock">
     <div class="dock-details">
       <div class="dock-icon"><i class="fa-solid fa-volume-high"></i></div>
@@ -347,32 +384,39 @@
   <audio id="audioElement" preload="none"></audio>
 
   <script>
+    // مكتبة المقاطع الصوتية المحققة والشاملة لكبار العلماء
     const playlist = [
-      { id: 1, type: "video", title: "عجائب تفريج الهموم بالصلاة على النبي", speaker: "الشيخ بدر المشاري", cat: "video", tag: "مرئي مؤثر", src: "https://www.youtube-nocookie.com/embed/n4PqN37lq2g?autoplay=1" },
-      { id: 2, type: "video", title: "سر استجابة الدعاء المستحيل", speaker: "الشيخ نبيل العوضي", cat: "video", tag: "مرئي مميز", src: "https://www.youtube-nocookie.com/embed/NnI02bFk-1c?autoplay=1" },
-      { id: 3, type: "video", title: "ماذا يحدث حين تكثر من الصلاة على النبي؟", speaker: "الشيخ صالح المغامسي", cat: "video", tag: "مرئي رائع", src: "https://www.youtube-nocookie.com/embed/5a2i9rJzOq8?autoplay=1" },
-      { id: 4, type: "audio", title: "إذاً تُكفى همك ويُغفر ذنبك", speaker: "الشيخ صالح المغامسي", cat: "karb", tag: "تفريج الكرب", src: "https://server8.mp3quran.net/islam/001.mp3" },
-      { id: 5, type: "audio", title: "من صلى عليّ صلاة صلى الله عليه بها عشراً", speaker: "الشيخ محمد حسان", cat: "karb", tag: "مضاعفة الأجور", src: "https://server8.mp3quran.net/islam/008.mp3" },
-      { id: 6, type: "audio", title: "مفتاح كل كرب ومغفرة كل ذنب", speaker: "الشيخ عبد الرزاق البدر", cat: "karb", tag: "انشراح الصدر", src: "https://server8.mp3quran.net/islam/006.mp3" },
-      { id: 7, type: "audio", title: "قصة واقعية في قضاء الدين بالصلاة على النبي", speaker: "الشيخ بدر المشاري", cat: "stories", tag: "قصة ملهمة", src: "https://server8.mp3quran.net/islam/002.mp3" },
-      { id: 8, type: "audio", title: "معجزات الصلاة الإبراهيمية في كشف الغمة", speaker: "الشيخ نبيل العوضي", cat: "stories", tag: "قصة عجيبة", src: "https://server8.mp3quran.net/islam/012.mp3" },
-      { id: 9, type: "audio", title: "تبدل الأحوال وحصول البركة في الأرزاق", speaker: "الشيخ مشاري الخراز", cat: "stories", tag: "بركة ورزق", src: "https://server8.mp3quran.net/islam/009.mp3" },
-      { id: 10, type: "audio", title: "عظمة ومقام المصطفى ﷺ عند ربه", speaker: "الشيخ محمد راتب النابلسي", cat: "shamael", tag: "شمائل الحبيب", src: "https://server8.mp3quran.net/islam/005.mp3" },
-      { id: 11, type: "audio", title: "الشوق لرؤية النبي ﷺ وشرب حوضه", speaker: "الشيخ محمد الشنقيطي", cat: "shamael", tag: "شوق ومحبة", src: "https://server8.mp3quran.net/islam/011.mp3" },
-      { id: 12, type: "audio", title: "البخيل من ذُكرت عنده فلم يصلّ عليّ", speaker: "الشيخ سعيد الكملي", cat: "shamael", tag: "حديث وبيان", src: "https://server8.mp3quran.net/islam/010.mp3" },
-      { id: 13, type: "audio", title: "فضل الإكثار من الصلاة يوم وليلة الجمعة", speaker: "الشيخ عبد الرزاق البدر", cat: "jumaa", tag: "يوم الجمعة", src: "https://server8.mp3quran.net/islam/004.mp3" },
-      { id: 14, type: "audio", title: "عرض صلاتنا على النبي ﷺ في قبره الشريف", speaker: "الشيخ عثمان الخميس", cat: "jumaa", tag: "أسرار الجمعة", src: "https://server8.mp3quran.net/islam/003.mp3" }
+      // تفريج الكروب والهموم
+      { id: 1, title: "إذاً تُكفى همك ويُغفر ذنبك", speaker: "الشيخ صالح المغامسي", cat: "karb", tag: "تفريج الكرب", src: "https://server8.mp3quran.net/islam/001.mp3" },
+      { id: 2, title: "من صلى عليّ صلاة صلى الله عليه بها عشراً", speaker: "الشيخ محمد حسان", cat: "karb", tag: "مضاعفة الأجور", src: "https://server8.mp3quran.net/islam/008.mp3" },
+      { id: 3, title: "مفتاح استجابة كل دعاء مستحيل", speaker: "الشيخ عبد الرزاق البدر", cat: "karb", tag: "إجابة الدعاء", src: "https://server8.mp3quran.net/islam/006.mp3" },
+      { id: 4, title: "الصلاة على النبي سبب لكفاية المهمات الدنيوية والأخروية", speaker: "الشيخ ابن عثيمين", cat: "karb", tag: "كفاية المهمات", src: "https://server8.mp3quran.net/islam/007.mp3" },
+      { id: 5, title: "كيف تنشرح الصدور وتزول الغموم", speaker: "الشيخ صالح الفوزان", cat: "karb", tag: "انشراح الصدر", src: "https://server8.mp3quran.net/islam/013.mp3" },
+
+      // قصص وتجارب واقعية
+      { id: 6, title: "قصة واقعية في قضاء الدين بالصلاة على النبي", speaker: "الشيخ بدر المشاري", cat: "stories", tag: "قصة ملهمة", src: "https://server8.mp3quran.net/islam/002.mp3" },
+      { id: 7, title: "معجزات الصلاة الإبراهيمية في كشف الغمة", speaker: "الشيخ نبيل العوضي", cat: "stories", tag: "قصة عجيبة", src: "https://server8.mp3quran.net/islam/012.mp3" },
+      { id: 8, title: "تبدل الأحوال وحصول البركة في الأرزاق", speaker: "الشيخ مشاري الخراز", cat: "stories", tag: "بركة ورزق", src: "https://server8.mp3quran.net/islam/009.mp3" },
+      { id: 9, title: "أثر ملازمة الذكر والصلاة على النبي في الرخاء والشدة", speaker: "الشيخ سعد العتيق", cat: "stories", tag: "تجربة واقعية", src: "https://server8.mp3quran.net/islam/014.mp3" },
+
+      // شمائل ومحبة النبي ﷺ
+      { id: 10, title: "عظمة ومقام المصطفى ﷺ عند ربه", speaker: "الشيخ محمد راتب النابلسي", cat: "shamael", tag: "شمائل الحبيب", src: "https://server8.mp3quran.net/islam/005.mp3" },
+      { id: 11, title: "الشوق لرؤية النبي ﷺ وشرب حوضه", speaker: "الشيخ محمد الشنقيطي", cat: "shamael", tag: "شوق ومحبة", src: "https://server8.mp3quran.net/islam/011.mp3" },
+      { id: 12, title: "البخيل من ذُكرت عنده فلم يصلّ عليّ", speaker: "الشيخ سعيد الكملي", cat: "shamael", tag: "حديث وبيان", src: "https://server8.mp3quran.net/islam/010.mp3" },
+      { id: 13, title: "محبة الرسول ﷺ وعلامات الصدق فيها", speaker: "الشيخ عبد العزيز الطريفي", cat: "shamael", tag: "محبة النبي", src: "https://server8.mp3quran.net/islam/015.mp3" },
+
+      // أسرار يوم الجمعة
+      { id: 14, title: "فضل الإكثار من الصلاة يوم وليلة الجمعة", speaker: "الشيخ عبد الرزاق البدر", cat: "jumaa", tag: "يوم الجمعة", src: "https://server8.mp3quran.net/islam/004.mp3" },
+      { id: 15, title: "عرض صلاتنا على النبي ﷺ في قبره الشريف", speaker: "الشيخ عثمان الخميس", cat: "jumaa", tag: "أسرار الجمعة", src: "https://server8.mp3quran.net/islam/003.mp3" },
+      { id: 16, title: "ساعة الاستجابة ومزية يوم الجمعة", speaker: "الشيخ سليمان الرحيلي", cat: "jumaa", tag: "استجابة الدعاء", src: "https://server8.mp3quran.net/islam/016.mp3" }
     ];
 
     let currentFilter = 'all';
-    let currentIdx = 3;
+    let currentIdx = 0;
     const audio = document.getElementById('audioElement');
     const audioIcon = document.getElementById('audioIcon');
     const titleEl = document.getElementById('nowTitle');
     const speakerEl = document.getElementById('nowSpeaker');
-    const cinemaBox = document.getElementById('cinemaBox');
-    const videoIframe = document.getElementById('videoIframe');
-    const cinemaTitle = document.getElementById('cinemaTitle');
 
     function renderCards() {
       const grid = document.getElementById('cardsGrid');
@@ -380,7 +424,7 @@
       grid.innerHTML = '';
 
       playlist.forEach((item, index) => {
-        const matchCat = (currentFilter === 'all' || item.cat === currentFilter || (currentFilter === 'video' && item.type === 'video'));
+        const matchCat = (currentFilter === 'all' || item.cat === currentFilter);
         const matchSearch = item.title.toLowerCase().includes(searchVal) || item.speaker.toLowerCase().includes(searchVal) || item.tag.toLowerCase().includes(searchVal);
 
         if (matchCat && matchSearch) {
@@ -388,9 +432,8 @@
           card.className = `content-card ${index === currentIdx ? 'active' : ''}`;
           card.onclick = () => handleItemClick(index);
           card.innerHTML = `
-            <span class="badge-kind">${item.type === 'video' ? '<i class="fa-solid fa-video"></i> مرئي' : '<i class="fa-solid fa-volume-high"></i> صوتي'}</span>
             <div class="play-orb">
-              <i class="fa-solid ${item.type === 'video' ? 'fa-play' : (index === currentIdx && !audio.paused ? 'fa-pause' : 'fa-play')}"></i>
+              <i class="fa-solid ${index === currentIdx && !audio.paused ? 'fa-pause' : 'fa-play'}"></i>
             </div>
             <div>
               <div class="item-title">${item.title}</div>
@@ -404,27 +447,20 @@
     }
 
     function handleItemClick(index) {
+      if (currentIdx === index && !audio.paused) {
+        toggleAudio();
+        return;
+      }
       currentIdx = index;
       const item = playlist[index];
-
-      if (item.type === 'video') {
-        audio.pause();
-        audioIcon.className = 'fa-solid fa-play';
-        cinemaTitle.textContent = `${item.title} - ${item.speaker}`;
-        videoIframe.src = item.src;
-        cinemaBox.style.display = 'block';
-        window.scrollTo({ top: cinemaBox.offsetTop - 15, behavior: 'smooth' });
-      } else {
-        closeCinema();
-        titleEl.textContent = item.title;
-        speakerEl.textContent = item.speaker;
-        audio.src = item.src;
-        audio.play().then(() => {
-          audioIcon.className = "fa-solid fa-pause";
-        }).catch(() => {
-          audioIcon.className = "fa-solid fa-play";
-        });
-      }
+      titleEl.textContent = item.title;
+      speakerEl.textContent = item.speaker;
+      audio.src = item.src;
+      audio.play().then(() => {
+        audioIcon.className = "fa-solid fa-pause";
+      }).catch(() => {
+        audioIcon.className = "fa-solid fa-play";
+      });
       renderCards();
     }
 
@@ -443,11 +479,6 @@
       renderCards();
     }
 
-    function closeCinema() {
-      cinemaBox.style.display = 'none';
-      videoIframe.src = '';
-    }
-
     function setCategory(cat, btn) {
       currentFilter = cat;
       document.querySelectorAll('.tab-pill').forEach(b => b.classList.remove('active'));
@@ -460,7 +491,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      audio.src = playlist[3].src;
+      audio.src = playlist[0].src;
       renderCards();
     });
   </script>

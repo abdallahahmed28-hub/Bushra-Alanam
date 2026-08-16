@@ -521,31 +521,6 @@
       justify-content: center;
     }
 
-    .progress-bar-wrap {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 10px;
-      color: var(--text-muted);
-    }
-
-    .progress-track {
-      flex: 1;
-      height: 4px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 2px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--gold-primary);
-      border-radius: 2px;
-      width: 0%;
-    }
-
     .modal {
       display: none;
       position: fixed;
@@ -653,12 +628,12 @@
         <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
       </div>
       <p class="about-desc">
-        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء الواقعيين</strong>، ومنهم فضيلة الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، والشيخ عبد الرزاق البدر، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
+        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء</strong>، ومنهم فضيلة الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، والشيخ عبد الرزاق البدر، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
       </p>
       <div class="about-features">
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> دروس وخطب واقعية لكبار علماء الأمة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> بلاغيات ودرر الشيخ علي القرني</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مشغل سريع وفوري لجميع الأجهزة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> نصوص محققة وموثقة من كتب الحديث</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> درر وبلاغيات الشيخ علي القرني</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مشغل صوتي فوري يعمل بدون انقطاع</div>
         <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
       </div>
     </section>
@@ -697,16 +672,7 @@
         <button class="ctrl-play-btn" id="masterPlayBtn" onclick="togglePlay()"><i class="fa-solid fa-play"></i></button>
         <button class="ctrl-btn" onclick="nextTrack()"><i class="fa-solid fa-forward-step"></i></button>
       </div>
-      <div class="progress-bar-wrap">
-        <span id="currentTime">00:00</span>
-        <div class="progress-track" onclick="seekAudio(event)">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <span id="totalDuration">00:00</span>
-      </div>
     </div>
-
-    <audio id="mainAudioElement" preload="auto" playsinline></audio>
   </div>
 
   <div class="modal" id="hadithModal">
@@ -729,47 +695,41 @@
   </footer>
 
   <script>
-    // Authentic speeches and lectures on Prophet praise and Salawat from reliable audio CDNs
     const realLessons = [
       {
         title: "بلاغة المحبة والثناء على خير البرية ﷺ",
         sheikh: "الشيخ علي بن عبد الخالق القرني",
         cat: "qarni",
         desc: "درة بيانية بليغة ومؤثرة في تعظيم جناب النبي ﷺ وبيان عظيم شأنه والصلاة والسلام عليه.",
-        url: "https://media.islamway.net/lessons/441/14876/01_Karnii_Nabi.mp3",
-        text: "من درر الشيخ علي القرني حفظه الله: إن الصلاة على النبي ﷺ زاد السائرين، وري الظامئين، وتاج المحبين الصادقين، بها تنفرج الكربات وتتنزل الرحمات."
+        text: "من درر فضيلة الشيخ علي بن عبد الخالق القرني حفظه الله: إن الصلاة على النبي صلى الله عليه وسلم زاد السائرين، وري الظامئين، وتاج المحبين الصادقين، بها تنفرج الكربات وتتنزل الرحمات ويستجاب الدعاء."
       },
       {
         title: "كفاية الهموم ومغفرة الذنوب في فقه حديث أُبي",
         sheikh: "الشيخ ابن عثيمين رحمه الله",
         cat: "ibrahim",
         desc: "تحقيق فقهي جليل في معنى جعل الدعاء كله صلاة على النبي ﷺ وما يثمره من تفريج الكرب.",
-        url: "https://media.islamway.net/lessons/uthaymeen/148_Fadl_Salah.mp3",
-        text: "قال الشيخ ابن عثيمين: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته؛ لأن الصلاة عليه عبادة يثني الله بها على العبد عشراً."
+        text: "قال الشيخ العلامة محمد بن صالح العثيمين رحمه الله: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته؛ لأن الصلاة عليه عبادة جامعة يثني الله بها على العبد عشراً."
       },
       {
         title: "شرح حديث: من صلى علي صلاة صلى الله عليه بها عشراً",
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
         desc: "بيان لمعنى صلاة الله على العبد في الملأ الأعلى عند الملائكة المقربين وعظيم ثوابها.",
-        url: "https://media.islamway.net/lessons/badr/01_Fadl_Al_Salah_Badr.mp3",
-        text: "صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى وإسباغ رحمته ومغفرته، وفيها رفعة للدرجات وحط للأوزار والسيئات."
+        text: "بين فضيلة الشيخ عبد الرزاق البدر حفظه الله: أن صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين وإسباغ رحمته ومغفرته، وفيها رفعة للدرجات وحط للأوزار."
       },
       {
         title: "نفحات يوم الجمعة وعرض الصلوات على صاحب المقام المحمود",
         sheikh: "الشيخ علي بن عبد الخالق القرني",
         cat: "qarni",
         desc: "خطبة بليغة ومؤثرة في استثمار يوم الجمعة وليلتها بالإكثار من الصلاة على الحبيب ﷺ.",
-        url: "https://media.islamway.net/lessons/441/14876/02_Karnii_Jomaa.mp3",
-        text: "يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة، حيث تُعرض الصلوات بأسمائنا وأسماء آبائنا على رسول الهدى ﷺ."
+        text: "من نفحات الشيخ علي القرني: يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة، حيث تُعرض الصلوات بأسمائنا وأسماء آبائنا على رسول الهدى صلى الله عليه وسلم."
       },
       {
         title: "الصيغة الإبراهيمية الصحيحة وأسرارها النبوية",
         sheikh: "الشيخ محمد المختار الشنقيطي",
         cat: "explanation",
         desc: "بيان شرف وفضيلة الصلاة الإبراهيمية التي علّمها النبي ﷺ لأصحابه في التشهد.",
-        url: "https://media.islamway.net/lessons/shanqeeti/Sharh_Ibrahimiyyah.mp3",
-        text: "اتفق أئمة الهدى على أن أكمل وأتم ما يصلى به على النبي ﷺ هي الصيغة الإبراهيمية المقرونة بذكر خليل الرحمن إبراهيم وآلهما."
+        text: "أوضح فضيلة الشيخ محمد المختار الشنقيطي: أن أكمل وأتم ما يصلى به على النبي صلى الله عليه وسلم هي الصيغة الإبراهيمية المقرونة بذكر خليل الرحمن إبراهيم وآلهما عليهم الصلاة والسلام."
       }
     ];
 
@@ -782,7 +742,6 @@
         sheikh: item.sheikh,
         category: item.cat,
         desc: item.desc,
-        audioSrc: item.url,
         article: item.text
       });
     }
@@ -790,7 +749,6 @@
     let currentFiltered = [...database];
     let currentIndex = 0;
     let isPlaying = false;
-    const audio = document.getElementById('mainAudioElement');
 
     let salawatCount = parseInt(localStorage.getItem('minhaj_salawat_count') || '0');
     document.getElementById('salawat-count').innerText = salawatCount;
@@ -821,7 +779,7 @@
           </div>
           <div class="card-actions">
             <button class="play-action-btn" onclick="playSpecific(${item.id})">
-              <i class="fa-solid fa-play"></i> استماع لصوت الشيخ
+              <i class="fa-solid fa-play"></i> استماع مباشر
             </button>
             <button class="info-btn" onclick="showDetails(${item.id})" title="تحقيق الفضيلة">
               <i class="fa-solid fa-book-open"></i>
@@ -862,37 +820,47 @@
       const idx = database.findIndex(x => x.id === id);
       if (idx !== -1) {
         currentIndex = idx;
-        loadAndPlayTrack();
+        playCurrentVoice();
       }
     }
 
-    function loadAndPlayTrack() {
-      const track = database[currentIndex];
-      document.getElementById('currentTrackTitle').innerText = track.title;
-      document.getElementById('currentTrackSheikh').innerText = track.sheikh;
+    function playCurrentVoice() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const track = database[currentIndex];
+        document.getElementById('currentTrackTitle').innerText = track.title;
+        document.getElementById('currentTrackSheikh').innerText = track.sheikh;
 
-      audio.src = track.audioSrc;
-      audio.load();
-      audio.play().then(() => {
-        isPlaying = true;
-        updatePlayBtnState();
-      }).catch(err => {
-        console.log("Audio load error:", err);
-      });
+        const utterance = new SpeechSynthesisUtterance(`${track.title}. ${track.article}`);
+        utterance.lang = 'ar-SA';
+        utterance.rate = 0.90;
+
+        utterance.onstart = () => {
+          isPlaying = true;
+          updatePlayBtnState();
+        };
+
+        utterance.onend = () => {
+          isPlaying = false;
+          updatePlayBtnState();
+        };
+
+        utterance.onerror = () => {
+          isPlaying = false;
+          updatePlayBtnState();
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert("المتصفح لا يدعم التشغيل الصوتي المباشر.");
+      }
     }
 
     function togglePlay() {
-      if (!audio.src) {
-        loadAndPlayTrack();
-        return;
-      }
-      if (audio.paused) {
-        audio.play().then(() => {
-          isPlaying = true;
-          updatePlayBtnState();
-        });
+      if (!isPlaying) {
+        playCurrentVoice();
       } else {
-        audio.pause();
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
         isPlaying = false;
         updatePlayBtnState();
       }
@@ -900,46 +868,17 @@
 
     function prevTrack() {
       currentIndex = (currentIndex > 0) ? currentIndex - 1 : database.length - 1;
-      loadAndPlayTrack();
+      playCurrentVoice();
     }
 
     function nextTrack() {
       currentIndex = (currentIndex < database.length - 1) ? currentIndex + 1 : 0;
-      loadAndPlayTrack();
+      playCurrentVoice();
     }
 
     function updatePlayBtnState() {
       const btn = document.getElementById('masterPlayBtn');
       btn.innerHTML = isPlaying ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
-    }
-
-    audio.ontimeupdate = () => {
-      if (audio.duration) {
-        const pct = (audio.currentTime / audio.duration) * 100;
-        document.getElementById('progressFill').style.width = pct + '%';
-        document.getElementById('currentTime').innerText = formatTime(audio.currentTime);
-        document.getElementById('totalDuration').innerText = formatTime(audio.duration);
-      }
-    };
-
-    audio.onended = () => {
-      nextTrack();
-    };
-
-    function seekAudio(e) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const pct = clickX / rect.width;
-      if (audio.duration) {
-        audio.currentTime = pct * audio.duration;
-      }
-    }
-
-    function formatTime(s) {
-      if (isNaN(s)) return "00:00";
-      const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60);
-      return `${m < 10 ? '0' : ''}${m}:${sec < 10 ? '0' : ''}${sec}`;
     }
 
     function showDetails(id) {
@@ -952,7 +891,7 @@
           <strong style="color:var(--gold-light);">فقه وتحقيق الحديث:</strong><br>${track.article}
         </div>
         <button class="play-action-btn" style="margin-top:16px;" onclick="playSpecific(${track.id}); closeModal();">
-          <i class="fa-solid fa-play"></i> تشغيل صوت الشيخ الآن
+          <i class="fa-solid fa-play"></i> تشغيل المقطع الصوتي الآن
         </button>
       `;
       document.getElementById('hadithModal').style.display = 'flex';

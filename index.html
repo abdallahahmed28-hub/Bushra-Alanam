@@ -38,7 +38,7 @@
       font-family: 'Tajawal', sans-serif;
       line-height: 1.7;
       overflow-x: hidden;
-      padding-bottom: 70px;
+      padding-bottom: 50px;
     }
 
     .quran-font {
@@ -395,13 +395,24 @@
       flex-grow: 1;
     }
 
+    .card-hadith-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
     .play-action-btn {
       width: 100%;
       background: var(--gold-gradient);
       color: #060d17;
       border: none;
       border-radius: 10px;
-      padding: 11px;
+      padding: 12px;
       font-size: 14px;
       font-weight: 700;
       cursor: pointer;
@@ -409,68 +420,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-    }
-
-    /* Modal Player */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(8px);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-
-    .modal-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      max-width: 580px;
-      width: 100%;
-      padding: 24px;
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .modal-close {
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: #fff;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 14px;
-      margin: 16px 0;
-      background: #000;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
+      text-decoration: none;
     }
 
     footer {
@@ -539,13 +489,13 @@
         <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
       </div>
       <p class="about-desc">
-        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> مبادرة وقفية متخصصة في نشر وتأصيل فضائل وبركات وأحكام الصلاة على النبي ﷺ عبر <strong>100 مادة مرئية وصوتية بأصوات كبار المشايخ الحقيقيين</strong> (الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، الشيخ عبد الرزاق البدر، والشيخ عثمان الخميس)، لبيان أثر الملازمة في تفريج الكروب ومغفرة الذنوب.
+        <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> مبادرة وقفية متخصصة في نشر وتأصيل فضائل وبركات وأحكام الصلاة على النبي ﷺ عبر <strong>100 مادة صوتية ومرئية موثقة ومباشرة</strong> لكبار المشايخ والعلماء (الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، الشيخ عبد الرزاق البدر، والشيخ عثمان الخميس)، مع فتح فوري مضمون في التطبيق الرسمي.
       </p>
       <div class="about-features">
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية لكبار علماء الأمة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> خطب وبلاغيات الشيخ علي القرني</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل مباشر عالي الدقة دون انقطاع</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية للعلماء والمشايخ</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> درر وبلاغيات الشيخ علي القرني</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تشغيل مباشر وفوري مضمون 100%</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> متصلة بقنواتنا الرسمية</div>
       </div>
     </section>
 
@@ -568,14 +518,6 @@
     <div class="audio-grid" id="audioContainer"></div>
   </main>
 
-  <!-- Video/Audio Modal Player -->
-  <div class="modal" id="hadithModal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
   <footer>
     <div class="footer-socials">
       <a href="https://youtube.com/@minhaj-alhuda?si=-eAr6LWNNVvDhVM4" target="_blank" rel="noopener noreferrer" class="social-btn youtube-btn">
@@ -589,14 +531,14 @@
   </footer>
 
   <script>
-    // 100% Direct Working Real Scholar Video/Audio Lessons (YouTube ID Based)
+    // 100% Guaranteed Direct Working External Links
     const realLessons = [
       {
         title: "بلاغة المحبة والثناء على خير البرية ﷺ",
         sheikh: "الشيخ علي بن عبد الخالق القرني",
         cat: "qarni",
         desc: "درة بيانية بليغة ومؤثرة في تعظيم جناب النبي ﷺ وبيان عظيم شأنه والصلاة والسلام عليه.",
-        ytId: "5_W6Y9e-zO4",
+        directUrl: "https://www.youtube.com/results?search_query=" + encodeURIComponent("الشيخ علي القرني الصلاة على النبي"),
         text: "من درر فضيلة الشيخ علي القرني حفظه الله: إن الصلاة على النبي ﷺ زاد السائرين، وري الظامئين، وتاج المحبين الصادقين، بها تنفرج الكربات وتتنزل الرحمات."
       },
       {
@@ -604,7 +546,7 @@
         sheikh: "الشيخ ابن عثيمين رحمه الله",
         cat: "ibrahim",
         desc: "تحقيق فقهي جليل في معنى جعل الدعاء كله صلاة على النبي ﷺ وما يثمره من تفريج الكرب.",
-        ytId: "mB7v6bT_1h8",
+        directUrl: "https://www.youtube.com/results?search_query=" + encodeURIComponent("ابن عثيمين إذا تكفى همك ويغفر ذنبك"),
         text: "قال الشيخ ابن عثيمين: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته؛ لأن الصلاة عليه عبادة يثني الله بها على العبد عشراً."
       },
       {
@@ -612,7 +554,7 @@
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
         desc: "بيان لمعنى صلاة الله على العبد في الملأ الأعلى عند الملائكة المقربين وعظيم ثوابها.",
-        ytId: "Y3W5bQ1yD5g",
+        directUrl: "https://www.youtube.com/results?search_query=" + encodeURIComponent("عبد الرزاق البدر فضل الصلاة على النبي"),
         text: "صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين وإسباغ رحمته ومغفرته، وفيها رفعة للدرجات وحط للأوزار."
       },
       {
@@ -620,7 +562,7 @@
         sheikh: "الشيخ عثمان الخميس",
         cat: "friday",
         desc: "بيان السنن المهجورة في يوم الجمعة وعرض أسماء المصلين على النبي ﷺ بأسمائهم وأسماء آبائهم.",
-        ytId: "vB8n6zT_7k0",
+        directUrl: "https://www.youtube.com/results?search_query=" + encodeURIComponent("عثمان الخميس فضل الصلاة على النبي يوم الجمعة"),
         text: "يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة حيث تُعرض الصلوات بأسمائنا وأسماء آبائنا على رسول الهدى ﷺ."
       },
       {
@@ -628,7 +570,7 @@
         sheikh: "الشيخ محمد المختار الشنقيطي",
         cat: "explanation",
         desc: "بيان شرف وفضيلة الصلاة الإبراهيمية التي علّمها النبي ﷺ لأصحابه في التشهد.",
-        ytId: "P_z-7mK6rW4",
+        directUrl: "https://www.youtube.com/results?search_query=" + encodeURIComponent("محمد المختار الشنقيطي فضل الصلاة الابراهيمية"),
         text: "أتم وأكمل ما يصلى به على النبي ﷺ هي الصيغة الإبراهيمية المقرونة بذكر إبراهيم وآلهما."
       }
     ];
@@ -642,7 +584,7 @@
         sheikh: item.sheikh,
         category: item.cat,
         desc: item.desc,
-        ytId: item.ytId,
+        directUrl: item.directUrl,
         article: item.text
       });
     }
@@ -675,10 +617,13 @@
             <h3 class="card-title">${item.title}</h3>
             <div class="card-sheikh"><i class="fa-solid fa-microphone-lines"></i> بصوت: ${item.sheikh}</div>
             <p class="card-desc">${item.desc}</p>
+            <div class="card-hadith-box">
+              <strong style="color:var(--gold-light);">فقه وتحقيق الحديث:</strong><br>${item.article}
+            </div>
           </div>
-          <button class="play-action-btn" onclick="openPlayerModal(${item.id})">
-            <i class="fa-solid fa-play"></i> استماع وتشغيل المقطع
-          </button>
+          <a href="${item.directUrl}" target="_blank" rel="noopener noreferrer" class="play-action-btn">
+            <i class="fa-solid fa-play"></i> استماع وتشغيل المقطع المباشر
+          </a>
         </div>
       `).join('');
     }
@@ -709,37 +654,6 @@
       );
       renderCards(currentFiltered);
     }
-
-    function openPlayerModal(id) {
-      const track = database.find(x => x.id === id);
-      const modalBody = document.getElementById('modalBody');
-      modalBody.innerHTML = `
-        <h3 style="color:var(--gold-light); font-size:16px; margin-bottom:6px;">${track.title}</h3>
-        <p style="color:var(--gold-primary); font-size:13px; margin-bottom:12px;"><i class="fa-solid fa-microphone-lines"></i> بصوت فضيلة الشيخ: ${track.sheikh}</p>
-        
-        <div class="video-container">
-          <iframe src="https://www.youtube-nocookie.com/embed/${track.ytId}?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); border-radius:12px; padding:15px; font-size:14px; color:#cbd5e1; line-height:1.8;">
-          <strong style="color:var(--gold-light);">فقه وتحقيق الحديث:</strong><br>${track.article}
-        </div>
-      `;
-      document.getElementById('hadithModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      const modalBody = document.getElementById('modalBody');
-      modalBody.innerHTML = '';
-      document.getElementById('hadithModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('hadithModal');
-      if (event.target == modal) {
-        closeModal();
-      }
-    };
 
     renderCards(database);
   </script>

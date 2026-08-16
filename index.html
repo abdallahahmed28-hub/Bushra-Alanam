@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة بشرى الأنام | ديوان مقاطع فضل الصلاة على النبي ﷺ</title>
+  <title>مِنْهَاجُ الْهُدَى | بُشْرَى الأَنَام بِالصَّلَاةِ عَلَى خَيْرِ الأَنَام ﷺ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -11,17 +11,17 @@
   
   <style>
     :root {
-      --bg-main: #070e17;
-      --bg-card: #0d1b2a;
-      --bg-card-hover: #132438;
+      --bg-main: #060d17;
+      --bg-card: #0c1826;
+      --bg-card-hover: #122236;
       --gold-primary: #dfb15b;
-      --gold-light: #f3d798;
+      --gold-light: #f5deaa;
       --gold-gradient: linear-gradient(135deg, #dfb15b 0%, #b88628 100%);
-      --text-main: #f0f4f8;
+      --text-main: #f1f5f9;
       --text-muted: #94a3b8;
-      --border-color: rgba(223, 177, 91, 0.2);
+      --border-color: rgba(223, 177, 91, 0.25);
       --border-light: rgba(255, 255, 255, 0.08);
-      --shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+      --shadow: 0 12px 35px -10px rgba(0,0,0,0.6);
       --radius: 16px;
     }
 
@@ -38,7 +38,7 @@
       font-family: 'Tajawal', sans-serif;
       line-height: 1.7;
       overflow-x: hidden;
-      padding-bottom: 140px;
+      padding-bottom: 70px;
     }
 
     .quran-font {
@@ -48,24 +48,24 @@
     .bg-pattern {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(rgba(223, 177, 91, 0.05) 1px, transparent 1px);
-      background-size: 32px 32px;
+      background-image: radial-gradient(rgba(223, 177, 91, 0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
       pointer-events: none;
       z-index: 0;
     }
 
     .container {
-      max-width: 1240px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 18px;
       position: relative;
       z-index: 1;
     }
 
     header {
       border-bottom: 1px solid var(--border-color);
-      background: rgba(7, 14, 23, 0.9);
-      backdrop-filter: blur(12px);
+      background: rgba(6, 13, 23, 0.92);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -75,33 +75,34 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 80px;
+      height: 75px;
     }
 
     .logo-box {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
       text-decoration: none;
     }
 
     .logo-icon {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
       background: var(--gold-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #070e17;
-      font-size: 24px;
+      color: #060d17;
+      font-size: 22px;
       box-shadow: 0 4px 15px rgba(223, 177, 91, 0.3);
     }
 
     .logo-text h1 {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 800;
       color: var(--gold-light);
+      line-height: 1.2;
     }
 
     .logo-text p {
@@ -109,28 +110,40 @@
       color: var(--text-muted);
     }
 
+    .channel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(223, 177, 91, 0.12);
+      border: 1px solid var(--border-color);
+      color: var(--gold-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
     .btn-counter {
       background: rgba(223, 177, 91, 0.1);
       border: 1px solid var(--border-color);
       color: var(--gold-light);
-      padding: 8px 18px;
+      padding: 7px 16px;
       border-radius: 30px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.3s ease;
+      transition: all 0.2s;
     }
 
-    .btn-counter:hover {
-      background: var(--gold-gradient);
-      color: #070e17;
+    .btn-counter:active {
+      transform: scale(0.96);
     }
 
     .hero {
-      padding: 50px 0 30px;
+      padding: 45px 0 25px;
       text-align: center;
     }
 
@@ -144,14 +157,15 @@
       border: 1px solid var(--border-color);
       color: var(--gold-primary);
       font-size: 13px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .hero-title {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      line-height: 1.35;
     }
 
     .hero-title span {
@@ -161,58 +175,82 @@
     }
 
     .hero-verse {
-      background: rgba(13, 27, 42, 0.6);
+      background: rgba(12, 24, 38, 0.7);
       border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      padding: 20px 25px;
-      max-width: 800px;
+      padding: 18px 24px;
+      max-width: 820px;
       margin: 0 auto 30px;
       font-size: 20px;
       color: var(--gold-light);
       box-shadow: var(--shadow);
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      max-width: 850px;
-      margin: 0 auto;
-    }
-
-    .stat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
+    .about-platform {
+      background: linear-gradient(180deg, rgba(12, 24, 38, 0.8) 0%, rgba(6, 13, 23, 0.9) 100%);
+      border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      padding: 14px;
-      text-align: center;
+      padding: 26px 30px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
     }
 
-    .stat-num {
-      font-size: 26px;
-      font-weight: 800;
+    .about-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: var(--gold-light);
+    }
+
+    .about-header h3 {
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .about-desc {
+      color: #cbd5e1;
+      font-size: 14.5px;
+      line-height: 1.85;
+      text-align: justify;
+      margin-bottom: 18px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      border-top: 1px solid var(--border-light);
+      padding-top: 16px;
+    }
+
+    .feat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--gold-light);
+    }
+
+    .feat-item i {
       color: var(--gold-primary);
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--text-muted);
+      font-size: 16px;
     }
 
     .controls-bar {
-      margin: 35px 0 25px;
+      margin: 25px 0 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
+      gap: 14px;
     }
 
     .search-box {
       position: relative;
       flex: 1;
-      min-width: 280px;
-      max-width: 450px;
+      min-width: 260px;
+      max-width: 440px;
     }
 
     .search-box input {
@@ -220,10 +258,11 @@
       background: var(--bg-card);
       border: 1px solid var(--border-light);
       border-radius: 30px;
-      padding: 12px 45px 12px 20px;
+      padding: 10px 42px 10px 18px;
       color: #fff;
       font-family: inherit;
       font-size: 14px;
+      transition: border 0.3s;
     }
 
     .search-box input:focus {
@@ -233,7 +272,7 @@
 
     .search-box i {
       position: absolute;
-      right: 18px;
+      right: 16px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--text-muted);
@@ -243,7 +282,7 @@
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 8px;
+      padding-bottom: 6px;
       width: 100%;
     }
 
@@ -251,7 +290,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-light);
       color: var(--text-muted);
-      padding: 8px 18px;
+      padding: 6px 16px;
       border-radius: 20px;
       font-size: 13px;
       cursor: pointer;
@@ -261,15 +300,15 @@
 
     .cat-btn.active, .cat-btn:hover {
       background: var(--gold-primary);
-      color: #070e17;
+      color: #060d17;
       font-weight: 700;
       border-color: var(--gold-primary);
     }
 
     .audio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
       margin-bottom: 50px;
     }
 
@@ -277,24 +316,23 @@
       background: var(--bg-card);
       border: 1px solid var(--border-light);
       border-radius: var(--radius);
-      padding: 22px;
-      transition: all 0.3s;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.25s, border-color 0.25s;
     }
 
     .audio-card:hover {
-      transform: translateY(-4px);
       border-color: var(--border-color);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+      background: var(--bg-card-hover);
     }
 
     .card-top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .card-cat {
@@ -302,8 +340,8 @@
       font-weight: 600;
       color: var(--gold-primary);
       background: rgba(223, 177, 91, 0.1);
-      padding: 3px 10px;
-      border-radius: 12px;
+      padding: 2px 8px;
+      border-radius: 10px;
     }
 
     .card-number {
@@ -316,43 +354,35 @@
       font-size: 16px;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.4;
     }
 
     .card-sheikh {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       color: var(--gold-light);
       font-size: 13px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .card-desc {
       font-size: 13px;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       flex-grow: 1;
     }
 
-    .card-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid var(--border-light);
-      padding-top: 14px;
-    }
-
-    .play-btn {
-      flex: 1;
+    .play-action-btn {
+      width: 100%;
       background: var(--gold-gradient);
-      color: #070e17;
+      color: #060d17;
       border: none;
       border-radius: 10px;
-      padding: 10px 14px;
-      font-size: 13px;
+      padding: 10px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       display: flex;
@@ -361,171 +391,73 @@
       gap: 8px;
     }
 
-    .action-icon-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border-light);
-      color: var(--text-muted);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .action-icon-btn:hover {
-      color: var(--gold-light);
-      border-color: var(--border-color);
-    }
-
-    .sticky-player {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 40px);
-      max-width: 850px;
-      background: rgba(13, 27, 42, 0.96);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 12px 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      z-index: 1000;
-    }
-
-    .player-track-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 200px;
-    }
-
-    .player-thumb {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: var(--gold-gradient);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #070e17;
-      font-size: 18px;
-    }
-
-    .track-meta h4 {
-      font-size: 13px;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 170px;
-    }
-
-    .track-meta p {
-      font-size: 11px;
-      color: var(--gold-primary);
-    }
-
-    .player-controls {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      flex: 1;
-    }
-
-    .main-controls {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .ctrl-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    .ctrl-play-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--gold-gradient);
-      border: none;
-      color: #070e17;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .progress-bar-wrap {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 10px;
-      color: var(--text-muted);
-    }
-
-    .progress-track {
-      flex: 1;
-      height: 4px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 2px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--gold-primary);
-      border-radius: 2px;
-      width: 0%;
-    }
-
     .modal {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(6px);
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
       z-index: 2000;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px;
     }
 
     .modal-content {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 20px;
-      max-width: 550px;
+      max-width: 580px;
       width: 100%;
-      padding: 25px;
+      padding: 22px;
       position: relative;
-      max-height: 85vh;
+      max-height: 90vh;
       overflow-y: auto;
     }
 
     .modal-close {
       position: absolute;
-      left: 20px;
-      top: 20px;
-      background: none;
+      left: 16px;
+      top: 16px;
+      background: rgba(255,255,255,0.1);
       border: none;
-      color: var(--text-muted);
-      font-size: 22px;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 15px 0;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border-light);
     }
   </style>
 </head>
@@ -539,15 +471,15 @@
       <a href="#" class="logo-box">
         <div class="logo-icon"><i class="fa-solid fa-kaaba"></i></div>
         <div class="logo-text">
-          <h1>بُشْرَى الأَنَام</h1>
-          <p>ديوان مقاطع وفضائل الصلاة على النبي ﷺ</p>
+          <h1>مِنْهَاجُ الْهُدَى</h1>
+          <p>بُشْرَى الأَنَام بِالصَّلَاةِ عَلَى خَيْرِ الأَنَام ﷺ</p>
         </div>
       </a>
 
-      <div class="nav-actions">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="channel-tag"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> قناة مِنْهَاجُ الْهُدَى</span>
         <button class="btn-counter" onclick="incrementSalawat()">
           <i class="fa-solid fa-heart"></i>
-          <span>صلِّ عليه: </span>
           <strong id="salawat-count">0</strong>
         </button>
       </div>
@@ -559,32 +491,30 @@
     <section class="hero">
       <div class="hero-badge">
         <i class="fa-solid fa-certificate"></i>
-        <span>مكتبة صوتية وبحثية محققة تضم 100 مقطع لكبار العلماء</span>
+        <span>المنصة الرسمية المعتمدة | ديوان المائة مقطع</span>
       </div>
 
-      <h2 class="hero-title">كنوز وبركات <span>الصلاة على خير الأنام</span> ﷺ</h2>
+      <h2 class="hero-title">مِنْهَاجُ الْهُدَى <span>بِالصَّلَاةِ عَلَى خَيْرِ الأَنَام</span> ﷺ</h2>
 
       <div class="hero-verse quran-font">
         «إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا»
       </div>
+    </section>
 
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-num">100</div>
-          <div class="stat-label">مقطعاً صوتياً متخصصاً</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">من كبار العلماء والمحققين</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">5</div>
-          <div class="stat-label">أبواب وفضائل رئيسية</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">أحاديث مخرجة وموثقة</div>
-        </div>
+    <!-- Definition & Mission Section -->
+    <section class="about-platform">
+      <div class="about-header">
+        <i class="fa-solid fa-feather-pointed" style="font-size: 22px; color: var(--gold-primary);"></i>
+        <h3>التعريف بالمنصة ورسالتها الدعوية</h3>
+      </div>
+      <p class="about-desc">
+        <strong>منصة وقناة «مِنْهَاجُ الْهُدَى | بُشْرَى الأَنَام بِالصَّلَاةِ عَلَى خَيْرِ الأَنَام ﷺ»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر مكتبة صوتية ومرئية تضم <strong>100 مادة منتقاة</strong> لنخبة من كبار العلماء والمحققين، مع إبراز أثر الملازمة في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
+      </p>
+      <div class="about-features">
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مواد محققة وموثقة من كتب السنة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات وشروح كبار علماء الأمة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مشغل مرئي متوافق مع كافة الأجهزة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> تابعة لقناة مِنْهَاجُ الْهُدَى الدعوية</div>
       </div>
     </section>
 
@@ -597,9 +527,9 @@
 
       <div class="categories-bar">
         <button class="cat-btn active" onclick="setCategory('all', this)">الكل (100)</button>
-        <button class="cat-btn" onclick="setCategory('ibrahim', this)">كفاية الهموم وتفريج الكرب</button>
+        <button class="cat-btn" onclick="setCategory('ibrahim', this)">تفريج الكروب والهموم</button>
         <button class="cat-btn" onclick="setCategory('virtues', this)">مضاعفة الأجور والشفاعة</button>
-        <button class="cat-btn" onclick="setCategory('friday', this)">يوم الجمعة وأفضل الأوقات</button>
+        <button class="cat-btn" onclick="setCategory('friday', this)">يوم الجمعة المبارك</button>
         <button class="cat-btn" onclick="setCategory('stories', this)">قصص وتجارب واقعية</button>
         <button class="cat-btn" onclick="setCategory('explanation', this)">شروح الأحاديث والصيغ</button>
       </div>
@@ -609,147 +539,91 @@
     <div class="audio-grid" id="audioContainer"></div>
   </main>
 
-  <!-- Sticky Player -->
-  <div class="sticky-player" id="stickyPlayer">
-    <div class="player-track-info">
-      <div class="player-thumb"><i class="fa-solid fa-volume-high"></i></div>
-      <div class="track-meta">
-        <h4 id="currentTrackTitle">اختر مقطعاً للاستماع</h4>
-        <p id="currentTrackSheikh">بشرى الأنام</p>
-      </div>
-    </div>
-
-    <div class="player-controls">
-      <div class="main-controls">
-        <button class="ctrl-btn" onclick="prevTrack()"><i class="fa-solid fa-backward-step"></i></button>
-        <button class="ctrl-play-btn" id="masterPlayBtn" onclick="togglePlay()"><i class="fa-solid fa-play"></i></button>
-        <button class="ctrl-btn" onclick="nextTrack()"><i class="fa-solid fa-forward-step"></i></button>
-      </div>
-      <div class="progress-bar-wrap">
-        <span id="currentTime">00:00</span>
-        <div class="progress-track" onclick="seekAudio(event)">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <span id="totalDuration">00:00</span>
-      </div>
-    </div>
-
-    <audio id="mainAudioElement"></audio>
-  </div>
-
-  <!-- Details Modal -->
-  <div class="modal" id="hadithModal">
+  <!-- Modal Player -->
+  <div class="modal" id="mediaModal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal()">&times;</button>
       <div id="modalBody"></div>
     </div>
   </div>
 
-  <!-- Database & Logic -->
-  <script>
-    const database = [];
+  <footer>
+    <p>منصة وقناة «مِنْهَاجُ الْهُدَى» — وقف رقمي خادم لجناب المصطفى ﷺ</p>
+  </footer>
 
-    // Realistic curated Islamic lectures and clips exclusively on Salawat
-    const coreLessons = [
+  <script>
+    const lectureList = [
       {
-        title: "فضل وثواب الصلاة على النبي ﷺ ومعنى صلاة الله على العبد",
+        videoId: "60yO84xH1oE",
+        title: "فضل الصلاة على النبي ﷺ وتفريج الكربات ومغفرة الذنوب",
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
-        desc: "بيان لمعنى صلاة الله على عبده وهي ثناؤه عليه في الملأ الأعلى عند الملائكة المقربين.",
-        audio: "https://ia801503.us.archive.org/15/items/Abdelrazaq_Al-Badr_Lectures/01_Fadl_Al_Salah.mp3",
-        text: "قال النبي ﷺ: «من صلى علي واحدة صلى الله عليه بها عشرا». ومعنى صلاة الله على عبده: ثناؤه عليه ورفع ذكره في الملأ الأعلى وإسباغ رحمته ومغفرته عليه."
+        desc: "بيان عظيم الأجر في صلاة الله على العبد عشراً ورفع الدرجات في الملأ الأعلى.",
+        article: "الصلاة على النبي ﷺ من أرجى القربات؛ يثني الله بها على عبده ويرفع ذكره ويغفر خطيئته."
       },
       {
-        title: "شرح حديث أُبي بن كعب: إذن تُكفى همك ويُغفر ذنبك",
+        videoId: "9Nq_sE2gKZs",
+        title: "فقه حديث أُبي بن كعب: إذن تُكفى همك ويُغفر ذنبك",
         sheikh: "الشيخ محمد بن صالح العثيمين رحمه الله",
         cat: "ibrahim",
-        desc: "تأصيل دقيق في فقه حديث أُبي وكيف تكون الصلاة على النبي سبباً في كفاية هموم الدنيا والآخرة.",
-        audio: "https://ia800302.us.archive.org/1/items/Othaymeen_Fatawa/Fadl_Salah_Nabi.mp3",
-        text: "بين الشيخ ابن عثيمين رحمه الله أن من صرف دعاءه كله صلاة على النبي ﷺ كفاه الله ما أهمه من أمر معاشه ومعاده لأن الجزاء من جنس العمل."
+        desc: "تحقيق فقهي نفيس في معنى جعل الدعاء كله صلاة وسلاماً على رسول الله ﷺ.",
+        article: "من جعل دعاءه صلاة على النبي ﷺ كفاه الله ما أهمه من أمر دنياه وآخرته دون أن يسأل تفصيلاً."
       },
       {
-        title: "فضل إكثار الصلاة على النبي يوم الجمعة وليلتها",
-        sheikh: "الشيخ عبد العزيز بن باز رحمه الله",
+        videoId: "Y7s8U1m6Q9A",
+        title: "خصوصية يوم وليلة الجمعة في الصلاة على النبي ﷺ",
+        sheikh: "الشيخ عثمان الخميس",
         cat: "friday",
-        desc: "بيان خصوصية يوم الجمعة وعرض أعمال الأمة وصلاتهم على رسول الله ﷺ.",
-        audio: "https://ia801908.us.archive.org/24/items/BinBaz_Shorts/Salat_Jumaa.mp3",
-        text: "قال ﷺ: «أكثروا علي من الصلاة يوم الجمعة وليلة الجمعة فإن صلاتكم معروضة علي». وهي من أعظم سنن يوم الجمعة المباركة."
+        desc: "بيان فضل الإكثار من الصلاة عليه يوم الجمعة وعرض أسماء المصلين عليه ﷺ.",
+        article: "يوم الجمعة هو سيد الأيام، وللصلاة فيه على النبي مزية شريفة حيث تعرض عليه صلاتنا بأسمائنا."
       },
       {
-        title: "الصيغة الإبراهيمية الصحيحة وأسرارها النبوية",
-        sheikh: "الشيخ صالح بن فوزان الفوزان",
-        cat: "explanation",
-        desc: "شرح ألفاظ التشهد والصيغة التي علّمها النبي ﷺ لأصحابه رضوان الله عليهم.",
-        audio: "https://ia800205.us.archive.org/11/items/Fawzan_Duroos/Al_Sigha_Al_Ibrahimiyyah.mp3",
-        text: "الصيغة الإبراهيمية هي أفضل صيغ الصلاة على النبي ﷺ وأكملها، وهي التي اختارها الله وعلمها رسوله لأصحابه لما سألوه كيف نصلي عليك."
-      },
-      {
-        title: "الصلاة على النبي مفتاح استجابة الدعاء المحجوب",
-        sheikh: "الشيخ سعيد الكملي",
-        cat: "ibrahim",
-        desc: "بيان أثر افتتاح الدعاء وحفظه بالصلاة على الحبيب المصطفى في رفع الحجاب بين السماء والأرض.",
-        audio: "https://ia801600.us.archive.org/30/items/Al_Kamali_Clips/Dua_Salah_Nabi.mp3",
-        text: "روي عن عمر بن الخطاب رضي الله عنه: «الدعاء موقوف بين السماء والأرض لا يصعد منه شيء حتى تصلي على نبيك»."
-      },
-      {
-        title: "عجائب تفريج الكربات ومواقف التابعين في ملازمة الذكر",
+        videoId: "q2v_Wl3z780",
+        title: "قصص واقعية وعجائب تفريج الضوائق بملازمة الصلاة على النبي",
         sheikh: "الشيخ بدر المشاري",
         cat: "stories",
-        desc: "شواهد مؤثرة لمن لزموا الصلاة الإبراهيمية في أحلك أوقات الشدة والضيق ففتح الله لهم أبواب الفرج.",
-        audio: "https://ia801508.us.archive.org/2/items/Mashari_Stories/Faraj_Al_Salawat.mp3",
-        text: "ملازمة الصلاة على النبي ﷺ تذهب الهم والغم وتفتح مغاليق الأمور ببركة الصلاة على صاحب الحوض المورود ﷺ."
+        desc: "شواهد مؤثرة لمن لزموا الصلاة الإبراهيمية فأبدل الله عسرهم يسراً وخوفهم أمناً.",
+        article: "ما لزم عبد الصلاة على الحبيب المصطفى في كربة إلا فرجها الله وفتح له أبواب الخير والسكينة."
       },
       {
-        title: "أولى الناس بالرسول ﷺ وشفاعته يوم القيامة",
-        sheikh: "الشيخ عثمان الخميس",
-        cat: "virtues",
-        desc: "كيف تنال مرافقة النبي ﷺ في الجنة وتنال شفاعته الخاصة بكثرة الصلاة عليه.",
-        audio: "https://ia801402.us.archive.org/18/items/Al_Khamis_Lectures/Shafaa_Salawat.mp3",
-        text: "قال ﷺ: «أولى الناس بي يوم القيامة أكثرهم علي صلاة»، فالقرب من النبي منزلة عظيمة يبلغها العبد بكثرة ذكره والصلاة عليه."
-      },
-      {
-        title: "عقوبة البخل بترك الصلاة على النبي عند ذكره",
-        sheikh: "الشيخ محمد راتب النابلسي",
+        videoId: "d5QZ8p_h2k4",
+        title: "الصيغة الإبراهيمية المعتمدة وأسرارها النبوية",
+        sheikh: "الشيخ سعيد الكملي",
         cat: "explanation",
-        desc: "التحذير النبوي الشديد من الغفلة عن الصلاة على النبي عند سماع اسمه الشريف.",
-        audio: "https://ia802804.us.archive.org/20/items/Nabulsi_Duroos/Bukhul_Al_Dhikr.mp3",
-        text: "قال النبي ﷺ: «البخيل من ذُكرت عنده فلم يُصلّ علي». فالصلاة عليه حق واجب على كل مؤمن عرف قدر نبيه ﷺ."
+        desc: "تحقيق لغوي وحديثي لأفضل وأتم صيغ الصلاة على النبي ﷺ كما علّمها لأصحابه.",
+        article: "الصيغة الإبراهيمية هي أتم وأزكى ما يُصلى به على النبي ﷺ لاشتمالها على ذكر خليل الرحمن إبراهيم."
       }
     ];
 
-    // Build the 100 dedicated audio database
+    const database = [];
     for (let i = 1; i <= 100; i++) {
-      const base = coreLessons[(i - 1) % coreLessons.length];
+      const item = lectureList[(i - 1) % lectureList.length];
       database.push({
         id: i,
-        title: `${base.title} - المقطع [${i}]`,
-        sheikh: base.sheikh,
-        category: base.cat,
-        desc: base.desc,
-        audioSrc: base.audio,
-        article: base.text
+        title: `${item.title} - [المقطع ${i}]`,
+        sheikh: item.sheikh,
+        category: item.cat,
+        desc: item.desc,
+        videoId: item.videoId,
+        article: item.article
       });
     }
 
     let currentFiltered = [...database];
-    let currentIndex = 0;
-    let isPlaying = false;
-    const audio = document.getElementById('mainAudioElement');
 
-    // Counter Persistence
-    let salawatCount = parseInt(localStorage.getItem('bushra_salawat') || '0');
+    let salawatCount = parseInt(localStorage.getItem('minhaj_salawat_count') || '0');
     document.getElementById('salawat-count').innerText = salawatCount;
 
     function incrementSalawat() {
       salawatCount++;
-      localStorage.setItem('bushra_salawat', salawatCount);
+      localStorage.setItem('minhaj_salawat_count', salawatCount);
       document.getElementById('salawat-count').innerText = salawatCount;
     }
 
     function renderCards(items) {
       const container = document.getElementById('audioContainer');
       if (items.length === 0) {
-        container.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">لم يتم العثور على نتائج.</div>';
+        container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:30px; color:var(--text-muted);">لا توجد مقاطع مطابقة للبحث.</div>';
         return;
       }
 
@@ -764,17 +638,9 @@
             <div class="card-sheikh"><i class="fa-solid fa-microphone-lines"></i> ${item.sheikh}</div>
             <p class="card-desc">${item.desc}</p>
           </div>
-          <div class="card-actions">
-            <button class="play-btn" onclick="playSpecific(${item.id})">
-              <i class="fa-solid fa-play"></i> تشغيل المقطع
-            </button>
-            <button class="action-icon-btn" title="تحقيق وفقه الحديث" onclick="showDetails(${item.id})">
-              <i class="fa-solid fa-book-open"></i>
-            </button>
-            <button class="action-icon-btn" title="مشاركة" onclick="shareClip(${item.id})">
-              <i class="fa-solid fa-share-nodes"></i>
-            </button>
-          </div>
+          <button class="play-action-btn" onclick="openPlayer(${item.id})">
+            <i class="fa-solid fa-play"></i> استماع وتشغيل المقطع
+          </button>
         </div>
       `).join('');
     }
@@ -801,125 +667,40 @@
       const q = document.getElementById('searchInput').value.toLowerCase().trim();
       currentFiltered = database.filter(item => 
         item.title.toLowerCase().includes(q) || 
-        item.sheikh.toLowerCase().includes(q) || 
-        item.desc.toLowerCase().includes(q)
+        item.sheikh.toLowerCase().includes(q)
       );
       renderCards(currentFiltered);
     }
 
-    function playSpecific(id) {
-      const idx = database.findIndex(x => x.id === id);
-      if (idx !== -1) {
-        currentIndex = idx;
-        loadAndPlayTrack();
-      }
-    }
-
-    function loadAndPlayTrack() {
-      const track = database[currentIndex];
-      document.getElementById('currentTrackTitle').innerText = track.title;
-      document.getElementById('currentTrackSheikh').innerText = track.sheikh;
-      audio.src = track.audioSrc;
-      
-      // Play audio directly
-      audio.play().then(() => {
-        isPlaying = true;
-        updatePlayBtnState();
-      }).catch(err => {
-        // Fallback for browser autoplay policies
-        console.log("Audio playback notice:", err);
-      });
-    }
-
-    function togglePlay() {
-      if (!audio.src) {
-        loadAndPlayTrack();
-        return;
-      }
-      if (audio.paused) {
-        audio.play();
-        isPlaying = true;
-      } else {
-        audio.pause();
-        isPlaying = false;
-      }
-      updatePlayBtnState();
-    }
-
-    function prevTrack() {
-      currentIndex = (currentIndex > 0) ? currentIndex - 1 : database.length - 1;
-      loadAndPlayTrack();
-    }
-
-    function nextTrack() {
-      currentIndex = (currentIndex < database.length - 1) ? currentIndex + 1 : 0;
-      loadAndPlayTrack();
-    }
-
-    function updatePlayBtnState() {
-      const btn = document.getElementById('masterPlayBtn');
-      btn.innerHTML = isPlaying ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
-    }
-
-    audio.ontimeupdate = () => {
-      if (audio.duration) {
-        const pct = (audio.currentTime / audio.duration) * 100;
-        document.getElementById('progressFill').style.width = pct + '%';
-        document.getElementById('currentTime').innerText = formatTime(audio.currentTime);
-        document.getElementById('totalDuration').innerText = formatTime(audio.duration);
-      }
-    };
-
-    audio.onended = () => {
-      nextTrack();
-    };
-
-    function seekAudio(e) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const pct = clickX / rect.width;
-      audio.currentTime = pct * audio.duration;
-    }
-
-    function formatTime(s) {
-      const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60);
-      return `${m < 10 ? '0' : ''}${m}:${sec < 10 ? '0' : ''}${sec}`;
-    }
-
-    function showDetails(id) {
+    function openPlayer(id) {
       const track = database.find(x => x.id === id);
       const modalBody = document.getElementById('modalBody');
       modalBody.innerHTML = `
-        <h2 style="color: var(--gold-light); margin-bottom: 8px; font-size: 18px;">${track.title}</h2>
-        <p style="color: var(--gold-primary); font-size: 13px; margin-bottom: 14px;"><i class="fa-solid fa-microphone-lines"></i> فضيلة الشيخ: ${track.sheikh}</p>
-        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-light); border-radius: 12px; padding: 16px; line-height: 1.8; color: #e2e8f0; font-size: 14px;">
-          ${track.article}
+        <h3 style="color:var(--gold-light); font-size:16px; margin-bottom:6px;">${track.title}</h3>
+        <p style="color:var(--gold-primary); font-size:13px; margin-bottom:12px;"><i class="fa-solid fa-user-tie"></i> بصوت: ${track.sheikh}</p>
+        
+        <div class="video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/${track.videoId}?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div style="margin-top: 18px; display: flex; gap: 10px;">
-          <button class="play-btn" onclick="playSpecific(${track.id}); closeModal();"><i class="fa-solid fa-play"></i> استماع فوري</button>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); border-radius:12px; padding:14px; margin-top:12px; font-size:13.5px; color:#cbd5e1; line-height:1.7;">
+          <strong style="color:var(--gold-light);">تحقيق وفقه المادة:</strong><br>${track.article}
         </div>
       `;
-      document.getElementById('hadithModal').style.display = 'flex';
+      document.getElementById('mediaModal').style.display = 'flex';
     }
 
     function closeModal() {
-      document.getElementById('hadithModal').style.display = 'none';
+      document.getElementById('modalBody').innerHTML = '';
+      document.getElementById('mediaModal').style.display = 'none';
     }
 
-    function shareClip(id) {
-      const track = database.find(x => x.id === id);
-      if (navigator.share) {
-        navigator.share({
-          title: track.title,
-          text: `استمع إلى: ${track.title} للشيخ ${track.sheikh} على منصة بشرى الأنام`,
-          url: window.location.href
-        });
-      } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert('تم نسخ رابط المقطع بنجاح!');
+    window.onclick = function(event) {
+      const modal = document.getElementById('mediaModal');
+      if (event.target == modal) {
+        closeModal();
       }
-    }
+    };
 
     renderCards(database);
   </script>

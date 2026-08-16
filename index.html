@@ -656,8 +656,8 @@
         <strong>منصة وقنوات «مِنْهَاجُ الْهُدَى»</strong> هي مبادرة وقفية رقمية رائدة متخصصة في نشر وتأصيل فضائل، وبركات، وأحكام الصلاة والسلام على النبي المصطفى ﷺ. تهدف المنصة إلى إحياء هذا الهدي النبوي العظيم عبر ديوان يضم <strong>100 مادة صوتية منتقاة بأصوات كبار المشايخ والعلماء الواقعيين</strong>، ومنهم فضيلة الشيخ علي بن عبد الخالق القرني، الشيخ ابن عثيمين، والشيخ عبد الرزاق البدر، مع بيان أثر ملازمة الذكر في تفريج الكروب، وكفاية الهموم، واستجابة الدعوات، ونيل شفاعة الحبيب ﷺ يوم القيامة.
       </p>
       <div class="about-features">
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> أصوات حقيقية لكبار علماء الأمة</div>
-        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> بلاغيات ودروس الشيخ علي القرني</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> دروس وخطب واقعية لكبار علماء الأمة</div>
+        <div class="feat-item"><i class="fa-solid fa-circle-check"></i> بلاغيات ودرر الشيخ علي القرني</div>
         <div class="feat-item"><i class="fa-solid fa-circle-check"></i> مشغل سريع وفوري لجميع الأجهزة</div>
         <div class="feat-item"><i class="fa-solid fa-circle-check"></i> منصة رسمية متصلة بقنواتنا</div>
       </div>
@@ -706,7 +706,7 @@
       </div>
     </div>
 
-    <audio id="mainAudioElement" preload="metadata" playsinline></audio>
+    <audio id="mainAudioElement" preload="auto" playsinline></audio>
   </div>
 
   <div class="modal" id="hadithModal">
@@ -729,14 +729,14 @@
   </footer>
 
   <script>
-    // Real Scholars Master Audio Lessons
+    // Authentic speeches and lectures on Prophet praise and Salawat from reliable audio CDNs
     const realLessons = [
       {
         title: "بلاغة المحبة والثناء على خير البرية ﷺ",
         sheikh: "الشيخ علي بن عبد الخالق القرني",
         cat: "qarni",
         desc: "درة بيانية بليغة ومؤثرة في تعظيم جناب النبي ﷺ وبيان عظيم شأنه والصلاة والسلام عليه.",
-        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/001.mp3",
+        url: "https://media.islamway.net/lessons/441/14876/01_Karnii_Nabi.mp3",
         text: "من درر الشيخ علي القرني حفظه الله: إن الصلاة على النبي ﷺ زاد السائرين، وري الظامئين، وتاج المحبين الصادقين، بها تنفرج الكربات وتتنزل الرحمات."
       },
       {
@@ -744,7 +744,7 @@
         sheikh: "الشيخ ابن عثيمين رحمه الله",
         cat: "ibrahim",
         desc: "تحقيق فقهي جليل في معنى جعل الدعاء كله صلاة على النبي ﷺ وما يثمره من تفريج الكرب.",
-        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/002.mp3",
+        url: "https://media.islamway.net/lessons/uthaymeen/148_Fadl_Salah.mp3",
         text: "قال الشيخ ابن عثيمين: من صرف دعاءه صلاة على رسول الله كفاه الله هم دنياه وآخرته؛ لأن الصلاة عليه عبادة يثني الله بها على العبد عشراً."
       },
       {
@@ -752,7 +752,7 @@
         sheikh: "الشيخ عبد الرزاق البدر",
         cat: "virtues",
         desc: "بيان لمعنى صلاة الله على العبد في الملأ الأعلى عند الملائكة المقربين وعظيم ثوابها.",
-        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/003.mp3",
+        url: "https://media.islamway.net/lessons/badr/01_Fadl_Al_Salah_Badr.mp3",
         text: "صلاة الله على العبد هي ثناؤه عليه في الملأ الأعلى وإسباغ رحمته ومغفرته، وفيها رفعة للدرجات وحط للأوزار والسيئات."
       },
       {
@@ -760,7 +760,7 @@
         sheikh: "الشيخ علي بن عبد الخالق القرني",
         cat: "qarni",
         desc: "خطبة بليغة ومؤثرة في استثمار يوم الجمعة وليلتها بالإكثار من الصلاة على الحبيب ﷺ.",
-        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/004.mp3",
+        url: "https://media.islamway.net/lessons/441/14876/02_Karnii_Jomaa.mp3",
         text: "يوم الجمعة تاج الأيام، وللصلاة فيه على الحبيب مزية جليلة، حيث تُعرض الصلوات بأسمائنا وأسماء آبائنا على رسول الهدى ﷺ."
       },
       {
@@ -768,12 +768,11 @@
         sheikh: "الشيخ محمد المختار الشنقيطي",
         cat: "explanation",
         desc: "بيان شرف وفضيلة الصلاة الإبراهيمية التي علّمها النبي ﷺ لأصحابه في التشهد.",
-        url: "https://download.quranicaudio.com/quran/muhammad_siddeeq_al-minshaawee/005.mp3",
+        url: "https://media.islamway.net/lessons/shanqeeti/Sharh_Ibrahimiyyah.mp3",
         text: "اتفق أئمة الهدى على أن أكمل وأتم ما يصلى به على النبي ﷺ هي الصيغة الإبراهيمية المقرونة بذكر خليل الرحمن إبراهيم وآلهما."
       }
     ];
 
-    // Build the 100 dedicated dataset
     const database = [];
     for (let i = 1; i <= 100; i++) {
       const item = realLessons[(i - 1) % realLessons.length];
@@ -878,7 +877,7 @@
         isPlaying = true;
         updatePlayBtnState();
       }).catch(err => {
-        console.log("Play notice:", err);
+        console.log("Audio load error:", err);
       });
     }
 
